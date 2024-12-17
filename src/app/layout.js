@@ -3,6 +3,7 @@ import "@/styles/reset.css";
 import "@/styles/globals.css";
 import "@/styles/general.scss";
 import localFont from "next/font/local";
+import Header from "@/componets/header/Header";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${plusJakartaSans.variable} ${euclidCircularB.variable} antialiased`}
       >
+        <Header/>
         {children}
       </body>
     </html>
