@@ -3,10 +3,11 @@ import "@/styles/reset.css";
 import "@/styles/globals.css";
 import "@/styles/general.scss";
 import localFont from "next/font/local";
+import Header from "@/componets/header/Header";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
-  subsets: ["latin"],
+  subsets: ["latin", 'cyrillic-ext'],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 const euclidCircularB = localFont({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${plusJakartaSans.variable} ${euclidCircularB.variable} antialiased`}
       >
+        <Header/>
         {children}
       </body>
     </html>

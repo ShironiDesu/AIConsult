@@ -1,9 +1,12 @@
-// @import "mixins";
-// @import "typography";
-// @import "variables";
 @use "./mixins.scss" as mixins;
 @use "./typography.scss";
 @use "./variables.scss" as variables;
+
+:root {
+  --font-primary: var(--font-plus-jakarta); // основная
+  --font-secondary: var(--euclid-circular); // дополнительная
+}
+
 body,
 .container,
 ul {
@@ -27,7 +30,6 @@ ul {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 80px;
   position: relative;
   // @include mixins.pc {
   //   padding: 32px;
