@@ -1,0 +1,40 @@
+@import "mixins";
+@import "typography";
+@import "variables";
+
+body,
+.container,
+ul {
+  &::-webkit-scrollbar {
+    position: absolute !important;
+    right: 0;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $main;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:active {
+      background-color: white;
+    }
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px;
+  position: relative;
+  @include pc {
+    padding: 32px;
+  }
+
+  @include laptop() {
+    padding: 24px;
+  }
+  @include mobile-big() {
+    padding: 16px;
+  }
+}
