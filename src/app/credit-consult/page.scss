@@ -1,0 +1,43 @@
+.background {
+    width: 100%;
+    background: linear-gradient(110.39deg, #020400 -3.22%, #070D01 96.04%);
+    // background-color: black;
+}
+
+.credit-consult {
+    position: relative;
+    min-height: 760px;
+    padding-top: 239px;
+    background-image: url("/images/credit_screen.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // &::before {
+    //     width: 680px;
+    //     height: 680px;
+    //     content: "";
+    //     position: absolute;
+    //     background-position: center;
+    //     top: -30px;
+    //     left: -250px;
+    //     background-image: url("/images/credit-screen-bg-left.png");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     z-index: 105;
+    //     opacity: 0.9;
+    // }
+
+    // &::after {
+    //     width: fit-content;
+    //     height: auto;
+    //     width: 341px;
+    //     height: 903px;
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     background-image: url("/images/credit-screen-bg-right.svg");
+    //     background-size: contain;
+    // }
+}
