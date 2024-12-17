@@ -1,7 +1,9 @@
-@import "mixins";
-@import "typography";
-@import "variables";
-
+// @import "mixins";
+// @import "typography";
+// @import "variables";
+@use "./mixins.scss" as mixins;
+@use "./typography.scss";
+@use "./variables.scss" as variables;
 body,
 .container,
 ul {
@@ -12,7 +14,7 @@ ul {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $main;
+    background-color: variables.$main;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
@@ -25,16 +27,16 @@ ul {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 64px;
+  padding: 80px;
   position: relative;
-  @include pc {
-    padding: 32px;
-  }
+  // @include mixins.pc {
+  //   padding: 32px;
+  // }
 
-  @include laptop() {
-    padding: 24px;
-  }
-  @include mobile-big() {
-    padding: 16px;
-  }
+  // @include mixins.laptop() {
+  //   padding: 24px;
+  // }
+  // @include mixins.mobile-big() {
+  //   padding: 16px;
+  // }
 }
