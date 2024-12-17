@@ -1,9 +1,18 @@
 import HomePageSection from "./sections/HomePageSection";
+import "./page.scss"
 
 export default function Home() {
   return (
-    <main className="homepage__main" style={{ paddingTop: "150px" }}>
-      <HomePageSection />
-    </main>
+
+    <div className="background">
+      <div className="container">
+        <main className="homepage__main">
+        <HomePageSection />
+        </main>
+      </div>
+    </div>
+    
+    
+
   );
 }
