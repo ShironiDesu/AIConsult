@@ -3,17 +3,17 @@ import "@/styles/reset.css";
 import "@/styles/globals.css";
 import "@/styles/general.scss";
 import localFont from "next/font/local";
-import Header from "@/componets/header/Header";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
-  subsets: ["latin", 'cyrillic-ext'],
+  subsets: ["latin", "cyrillic-ext"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 const euclidCircularB = localFont({
   src: "./fonts/Euclid Circular B Regular.ttf",
   variable: "--euclid-circular",
   weight: "100 900",
+  subsets: ["latin", "cyrillic-ext"],
 });
 export const metadata = {
   title: "AI Consult",
@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${plusJakartaSans.variable} ${euclidCircularB.variable} antialiased`}
       >
-        <Header/>
         {children}
       </body>
     </html>
