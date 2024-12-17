@@ -1,12 +1,20 @@
 .homepage__section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
   width: 100%;
   padding: 28px;
   text-align: center;
+  grid-template-areas:
+    "consulting-card main-text main-text accounting-card"
+    "guarantee-card mini-text mini-text legal-card"
+    "guarantee-card insurance-card credit-card legal-card";
+  align-items: start;
   h1 {
+    grid-area: main-text;
+    align-self: self-end;
     font-family: var(--euclid-circular);
+    width: 100%;
     font-size: 48px;
     line-height: 54px;
     font-weight: 400;
@@ -15,6 +23,8 @@
     -webkit-text-fill-color: transparent;
   }
   h5 {
+    margin-top: 24px;
+    grid-area: mini-text;
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
     line-height: 25px;

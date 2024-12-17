@@ -1,6 +1,8 @@
 .homepage__card {
   text-align: center;
   max-width: 298px;
+
+  background-color: aqua;
   padding: 30px 15px;
   border-radius: 34.26px;
   display: flex;
@@ -12,6 +14,9 @@
   box-shadow: 0px 108px 132px 0px rgba(79, 58, 137, 0.25) inset;
   box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.16) inset;
   backdrop-filter: blur(48px);
+  img {
+    height: 60px;
+  }
   &__white-text {
     color: rgba(255, 255, 255, 1);
     line-height: 24px;
@@ -25,4 +30,42 @@
     font-size: 15px;
     font-weight: 400;
   }
+}
+.consulting-card {
+  grid-area: consulting-card;
+}
+
+.guarantee-card {
+  grid-area: guarantee-card;
+  margin-left: 69px;
+  margin-top: 21px;
+}
+
+.insurance-card {
+  margin-top: 57px;
+  grid-area: insurance-card;
+  justify-self: center;
+}
+
+.credit-card {
+  margin-top: 57px;
+  grid-area: credit-card;
+  justify-self: center;
+}
+
+.legal-card {
+  justify-self: end;
+  grid-area: legal-card;
+  margin-right: 75px;
+  margin-top: 21px;
+  height: 298px;
+  img {
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.accounting-card {
+  justify-self: end;
+  grid-area: accounting-card;
 }
