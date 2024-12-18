@@ -1,0 +1,37 @@
+.consult__container {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  align-items: center;
+  text-align: center;
+  .consult__img {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(153, 153, 153, 0) 100%
+    );
+
+    // border: 2px rgba(234, 255, 229, 0.14) solid;
+    border-radius: 11px;
+  }
+  h1 {
+    background: radial-gradient(
+      25.9% 100.67% at 50% 50%,
+      #ffffff 57.39%,
+      rgba(255, 255, 255, 0.6) 91.18%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--euclid-circular);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54.24px;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 1);
+  }
+}

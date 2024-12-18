@@ -1,0 +1,36 @@
+.legal-consulting__main {
+  width: 100%;
+
+  padding: 165 80 61;
+  // padding-top: 165px;
+  &__cards {
+    margin-top: 143px;
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+    }
+    &__middle {
+      margin-top: 59px;
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+    }
+  }
+}
+.background {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/LegalConsultBG.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
