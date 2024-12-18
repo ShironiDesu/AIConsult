@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from "react";
 import "./header.scss";
 import Image from "next/image";
@@ -10,19 +11,19 @@ export default function Header() {
   const navigationArr = [
     {
       title: "Главная",
-      // href: ,
+      navHref: "/home",
     },
     {
       title: "Ключевые услуги",
-      // href: ,
+      navHref: "/credit-consult",
     },
     {
       title: "Услуги ГИД",
-      // href: ,
+      navHref: "/credit-consult",
     },
     {
       title: "Услуги ГИД по залоговым активам",
-      // href: ,
+      navHref: "/credit-consult",
     }
   ]
 
@@ -35,11 +36,13 @@ export default function Header() {
 
         <ul className="header__navigation">
           {navigationArr.map((nav, index) => (
-            <li onClick={() => setActive((index + 1))} key={nav.title} className={`header__navigation__card ${active === (index + 1) ? 'header__navigation__card--active' : ''}`}>
-              <p className="header__navigation__number">0{index + 1}</p>
-              <p>{nav.title}</p>
-              <Image src="/images/vector.svg" width={7} height={7} alt="vector svg"/>
-            </li>
+            <Link href={nav.navHref} key={nav.title}>
+              <li onClick={() => setActive((index + 1))} className={`header__navigation__card ${active === (index + 1) ? 'header__navigation__card--active' : ''}`}>
+                <p className="header__navigation__number">0{index + 1}</p>
+                <p>{nav.title}</p>
+                <Image src="/images/hero_screen-vector.svg" width={7} height={7} alt="vector svg"/>
+              </li>
+            </Link>  
           ))}
         </ul>
       </div>

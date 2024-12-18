@@ -1,16 +1,13 @@
-import React from 'react'
+import React from "react";
+import CreditProviding from "./creditProviding/CreditProviding";
+import WorkListScreen from "./workListScreen/WorkListScreen";
 import "./page.scss"
-import CreditProviding from './creditProviding/CreditProviding'
 
 export default function page() {
-  return (
-    <div className="background">
-        <div className='container'>
-            <div className='credit-consult'>
-                <CreditProviding/>
-            </div>
+    return (
+        <div className="container before-after-shadow">
+          <CreditProviding />
+          <WorkListScreen />
         </div>
-    </div>
-    
-  )
+    );
 }
