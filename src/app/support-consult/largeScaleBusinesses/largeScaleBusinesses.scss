@@ -1,4 +1,4 @@
-.work-list {
+.scale-businesses {
     width: 100%;
     position: relative;
     min-height: 984px;
@@ -28,6 +28,8 @@
 
     &__shine_bg {
         position: absolute;
+        object-fit: cover;
+        height: 100%;
         left: 0;
         top: 0;
         pointer-events: none;

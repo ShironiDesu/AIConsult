@@ -1,4 +1,4 @@
-.work-list {
+.tariffs-medium {
     width: 100%;
     position: relative;
     min-height: 984px;
@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // background-image: url("/images/credit-screen-second-bg.png");
+    // background-position: top;
+    // background-size: cover;
+    // background-repeat: no-repeat;
     z-index: 0;
 
     &__title {
@@ -31,5 +35,6 @@
         left: 0;
         top: 0;
         pointer-events: none;
+        z-index: -100;
     }
 }

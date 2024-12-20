@@ -1,64 +1,67 @@
 import React from 'react'
-import "./workListScreen.scss"
+import "./tariffsMediumBusinesses.scss"
 import CardTemplate from '@/componets/cardTemplate/CardTemplate'
 import Image from 'next/image'
 
-export default function WorkListScreen() {
+export default function TariffsMediumBusinesses() {
 
     const cardsInfoArr = [
         {
-            title: "Тариф старт",
-            price: "250 000₸",
+            title: "Тариф Оптимум",
+            price: "750 000₸",
             descriptions: [
-                "Количество залоговых имуществ: до 2-х объектов;",
-                "Максимальная сумма подачи кредита: от 10 млн до 50 млн KZT.",
-                "Годовой оборот компании не должен превышать 150 млн KZT."
+                "Количество залоговых имуществ: до 12-ти объектов;",
+                "Максимальная сумма подачи кредита: от 150 млн до 220 млн KZT.",
+                "Годовой оборот компании не должен превышать 800 млн KZT."
             ],
             advantages: [
                 "Проверка перечня документов необходимых для подачи заявки;",
                 "Предоставление рекомендации после проверки документов;",
                 "Подбор оптимального кредитного продукта для Вашей задачи.",
-                "+ Бонус проверка документов до 2-х раз после корректировки документов."
+                "Консультация",
+                "+ Бонус проверка документов до 3-х раз после корректировки документов."
             ]
         },
         {
-            title: "Тариф базовый",
-            price: "400 000₸",
+            title: "Тариф Продвинутый",
+            price: "1 000 000₸",
             descriptions: [
-                "Количество залоговых имуществ: до 5 объектов.",
-                "Максимальная сумма кредита: от 50 млн до 100 млн KZT.",
-                "Годовой оборот компании не должен превышать 300 млн KZT."
+                "Количество залоговых имуществ: до 16-ти объектов.",
+                "Максимальная сумма кредита: от 220 млн до 300 млн KZT.",
+                "Годовой оборот компании не должен превышать 1 млрд KZT."
             ],
             advantages: [
                 "Проверка перечня документов необходимых для подачи заявки;",
                 "Предоставление рекомендации после проверки документов;",
                 "Подбор оптимального кредитного продукта для Вашей задачи.",
-                "+ Бонус проверка документов до 2-х раз после корректировки документов."
+                "Консультация",
+                "+ Бонус проверка документов до 3-х раз после корректировки документов."
             ]
         },
         {
-            title: "Тариф основной",
-            price: "550 000₸",
+            title: "Тариф Бизнес",
+            price: "1 500 000₸",
             descriptions: [
-                "Количество залоговых имуществ: до 8-ми объектов.",
-                "Максимальная сумма кредита: от 100 млн до 150 млн KZT.",
-                "Годовой оборот компании не должен превышать 500 млн KZT."
+                "Количество залоговых имуществ: до 22-х объектов.",
+                "Максимальная сумма кредита: от 300 млн до 500 млн KZT.",
+                "Годовой оборот компании не должен превышать 2 млрд KZT."
             ],
             advantages: [
                 "Проверка перечня документов необходимых для подачи заявки;",
                 "Предоставление рекомендации после проверки документов;",
                 "Подбор оптимального кредитного продукта для Вашей задачи.",
-                "+ Бонус проверка документов до 2-х раз после корректировки документов."
+                "Консультация",
+                "+ Бонус проверка документов до 3-х раз после корректировки документов."
             ]
         }
     ]
 
   return (
-    <div className='work-list'>
-        <h2 className='work-list__title'>Перечень выполняемых работ <br /> по тарифам для МСБ</h2>
-        <div className='work-list__cards'>
+    <div className='tariffs-medium'>
+        <h2 className='tariffs-medium__title'>Тарифы для Среднего и <br /> частично Крупного Бизнеса:</h2>
+        <div className='tariffs-medium__cards'>
             {cardsInfoArr.map(card => (
-                <CardTemplate key={card.title}  isGreen={false} isGray={false}>
+                <CardTemplate key={card.title} isGreen={false} isGray={false}>
                     <>
                         <div className='card-template__top'>
                             <h3 className='card-template__top_title'>{card.title}</h3>
@@ -81,8 +84,7 @@ export default function WorkListScreen() {
                 </CardTemplate>
             ))}
         </div>
-
-        <Image src="/images/credit-screen-second-bg.png" className='work-list__shine_bg' width={1440} height={984} layout='responsive' alt='credit screen second bg png'/>
+        <Image src="/images/credit-screen-second-bg.png" className='tariffs-medium__shine_bg' width={1440} height={984} layout='responsive' alt='credit screen second bg png'/>
     </div>
   )
 }

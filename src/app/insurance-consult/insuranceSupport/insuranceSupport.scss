@@ -1,23 +1,19 @@
-.credit-consult {
+.insurance-support {
     width: 100%;
     position: relative;
     min-height: 760px;
-    padding: 239px 80px 173px;
+    padding: 239px 80px 31px;
+    gap: 76px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-image: url("/images/credit_screen.png");
+    flex-direction: column;
+    background-image: url("/images/insurance-consult-screen.jpg");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
 
-    &__left {
-        display: flex;
-        flex-direction: column;
-        gap: 82px;
 
-        &-title {
+        &__title {
             font-family: var(--euclid-circular);
             font-size: 48px;
             font-weight: 400;
@@ -26,21 +22,49 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        &-description {
-            font-family: Arial;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 25.3px;
-            color: rgba(255, 255, 255, 1);     
-            opacity: 0.7; 
+
+        &__main {
+            display: flex;
+            gap: 14px;
+
+            &-column__third {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 12px;
+            }
+
+            p {
+                font-family: Arial;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                letter-spacing: -0.02em;
+            }
+
+            span {
+                font-family: Arial;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: -0.02em;
+            }
         }
         
-    }
+
 
     &__btn {
         display: flex;
         align-items: center;
         position: relative;
+        align-self: flex-end;
+        justify-self: flex-end;
         z-index: 2;
         font-family:  var(--euclid-circular);
         font-size: 20px;

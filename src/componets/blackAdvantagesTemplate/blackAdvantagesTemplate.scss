@@ -1,0 +1,42 @@
+.black-advantages {
+    min-width: 1029px;
+    margin-top: 27px;
+    position: relative;
+    display: flex;
+    padding: 25px 97px 25px 42px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 51px;
+    z-index: 2;
+    background: rgb(21, 23, 17);
+
+
+    &__text {
+        text-align: center;
+        font-family: var(--euclid-circular);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.29px;
+        color: rgba(148, 218, 128, 1);
+
+        span {
+            
+
+        }
+    }
+
+    
+
+    &::before {
+        position: absolute;
+        width: 64.9%;
+        height: 58px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        content: "";
+        bottom: -9px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -10;
+    }
+}
