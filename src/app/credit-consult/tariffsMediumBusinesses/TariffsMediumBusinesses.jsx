@@ -27,7 +27,7 @@ export default function TariffsMediumBusinesses() {
             price: "1 000 000₸",
             descriptions: [
                 "Количество залоговых имуществ: до 16-ти объектов.",
-                "Максимальная сумма кредита: от 220 млн до 300 млн KZT.",
+                "Максимальная сумма кредита: от 220 млн <br/> до 300 млн KZT.",
                 "Годовой оборот компании не должен превышать 1 млрд KZT."
             ],
             advantages: [
@@ -43,7 +43,7 @@ export default function TariffsMediumBusinesses() {
             price: "1 500 000₸",
             descriptions: [
                 "Количество залоговых имуществ: до 22-х объектов.",
-                "Максимальная сумма кредита: от 300 млн до 500 млн KZT.",
+                "Максимальная сумма кредита: от 300 млн до <br/> 500 млн KZT.",
                 "Годовой оборот компании не должен превышать 2 млрд KZT."
             ],
             advantages: [
@@ -68,7 +68,7 @@ export default function TariffsMediumBusinesses() {
                             <h3 className='card-template__top_price'>{card.price}</h3>
                             <div className='card-template__top_list'>
                                 {card.descriptions.map(desc => (
-                                    <p key={desc} className='card-template__top_list_desc'>{desc}</p>
+                                    <p key={desc} className='card-template__top_list_desc' dangerouslySetInnerHTML={{ __html: desc }}/>
                                 ))}
                             </div>
                         </div>

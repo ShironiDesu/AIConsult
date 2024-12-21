@@ -19,45 +19,52 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     transition: 0.4s all ease-in-out;
-    background-image: url("/images/card-template.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    &_criterions {
-      display: flex;
-      flex-direction: column;
+    position: relative;
+    width: 411px;
 
-      &_title {
-        font-family: var(--euclid-circular);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 18.08px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        background: linear-gradient(
-          158.22deg,
-          #ffffff 7.25%,
-          rgba(255, 255, 255, 0.64) 87.33%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
-      }
+    &__top {
+        width: 100%;
+        min-height: 338px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px 24px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: 0.4s all ease-in-out;
+        background-image: url("/images/card-template.png");
+        background-repeat: no-repeat;
+        background-size: cover;
 
-      &_desc {
-        font-family: Arial;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 23.36px;
-        background: linear-gradient(
-          158.22deg,
-          #ffffff 7.25%,
-          rgba(255, 255, 255, 0.64) 87.33%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
+        &_criterions {
+            display: flex;
+            flex-direction: column;
+
+            &_title {
+                font-family: var(--euclid-circular);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18.08px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            &_desc {
+                font-family: Arial;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 23.36px;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+
 
     &_title {
       background: linear-gradient(
@@ -168,10 +175,23 @@
       }
     }
 
-    &_advatage {
-      display: flex;
-      gap: 11px;
-      align-items: center;
+
+    &::before {
+        content: "";
+        background-image: url("/images/card-hover-border-effect.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        left: -15px;
+        top: -15px;
+        width: 107.5%;
+        height: 104.5%;
+        background-size: 100% 100%;
+        opacity: 1;
+        z-index: 20;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.4s all ease-in-out;
+
 
       &_img {
         height: fit-content;
@@ -219,10 +239,11 @@
     box-shadow: 0px 0px 18.3px 0px rgba(135, 220, 118, 1);
     transition: 0.4s all ease-in-out;
 
-    .card-template__top {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("/images/card-hover-effect.png");
+
+        &::before {
+            opacity: 32%;
+        }
+
     }
 
     &::before {
@@ -261,6 +282,55 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     transition: 0.4s all ease-in-out;
+
+    position: relative;
+    width: 411px;
+
+    &__top {
+        width: 100%;
+        // z-index: -3;
+        background: rgba(79, 58, 137, 0.25);
+        box-shadow: 0px 108px 132px 0px rgba(79, 58, 137, 0.25) inset;
+        box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.16) inset;
+        background-image: url("/images/card-template-green.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 338px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px 24px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: 0.4s all ease-in-out;
+
+        &_criterions {
+            display: flex;
+            flex-direction: column;
+
+            &_title {
+                font-family: var(--euclid-circular);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18.08px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            &_desc {
+                font-family: Arial;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 23.36px;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
 
     &_criterions {
       display: flex;
@@ -416,25 +486,23 @@
       gap: 11px;
       align-items: center;
 
-      &_img {
-        height: fit-content;
-        opacity: 0.7;
-      }
 
-      &_text {
-        font-family: Arial;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 23.36px;
-        opacity: 0.7;
-        background: linear-gradient(
-          158.22deg,
-          #ffffff 7.25%,
-          rgba(255, 255, 255, 0.64) 87.33%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    &::before {
+        content: "";
+        background-image: url("/images/card-hover-border-effect.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        left: -15px;
+        top: -15px;
+        width: 107%;
+        height: 104%;
+        background-size: 100% 100%;
+        opacity: 1;
+        z-index: 20;
+        pointer-events: none;
+        transition: 0.4s all ease-in-out;
+        opacity: 32%;
+
     }
   }
 
@@ -458,9 +526,11 @@
     transition: 0.4s all ease-in-out;
   }
 
-  &:nth-child(3)::before {
-    height: 107%;
-  }
+
+    // &:nth-child(3)::before {
+    //     height: 107%;
+    // }
+
 
   &:hover {
     transform: scaleY(1.042);
@@ -468,6 +538,10 @@
     backdrop-filter: blur(48px);
     box-shadow: 0px 0px 18.3px 0px rgba(135, 220, 118, 1);
   }
+}
+
+#changed-height::before {
+    height: 107%;
 }
 
 .fix-height {
@@ -496,45 +570,49 @@
     border-top-right-radius: 20px;
     transition: 0.4s all ease-in-out;
 
-    background-image: url("/images/card-template-gray-top.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    &_criterions {
-      display: flex;
-      flex-direction: column;
+    &__top {
+        width: 100%;
+        min-height: 298px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px 24px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: 0.4s all ease-in-out;
 
-      &_title {
-        font-family: var(--euclid-circular);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 18.08px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        background: linear-gradient(
-          158.22deg,
-          #ffffff 7.25%,
-          rgba(255, 255, 255, 0.64) 87.33%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
-      }
+        background-image: url("/images/card-template-gray-top.png");
+        background-repeat: no-repeat;
+        background-size: cover;
 
-      &_desc {
-        font-family: Arial;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 23.36px;
-        background: linear-gradient(
-          158.22deg,
-          #ffffff 7.25%,
-          rgba(255, 255, 255, 0.64) 87.33%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
+        &_criterions {
+            display: flex;
+            flex-direction: column;
+
+            &_title {
+                font-family: var(--euclid-circular);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18.08px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            &_desc {
+                font-family: Arial;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 23.36px;
+                background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
 
     &_title {
       background: linear-gradient(
@@ -645,10 +723,29 @@
       }
     }
 
-    &_advatage {
-      display: flex;
-      gap: 3px;
-      flex-direction: column;
+
+    &::before {
+        content: "";
+        background-image: url("/images/card-hover-border-effect.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        // left: -15px;
+        // top: -15px;
+        // width: 108%;
+        // height: 105%;
+        // background-size: 100% 100%;
+        left: -15px;
+        top: -15px;
+        width: 107%;
+        height: 104%;
+        background-size: 100% 100%;
+        opacity: 1;
+        z-index: 20;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.4s all ease-in-out;
+    }
+
 
       &-top {
         display: flex;
@@ -660,19 +757,9 @@
           opacity: 0.7;
         }
 
-        &_text {
-          font-family: Arial;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 23.36px;
-          opacity: 0.7;
-          background: linear-gradient(
-            158.22deg,
-            #ffffff 7.25%,
-            rgba(255, 255, 255, 0.64) 87.33%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+        &::before {
+            opacity: 32%;
+
         }
       }
 

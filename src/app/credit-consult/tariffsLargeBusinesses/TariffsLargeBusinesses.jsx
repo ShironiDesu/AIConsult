@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function TariffsLargeBusinesses() {
     const cardsInfoArr = [
         {
+            changedHeight: false,
             title: "Тариф Премиум",
             price: "2 250 000₸",
             descriptions: [
@@ -23,6 +24,7 @@ export default function TariffsLargeBusinesses() {
             ],
         },
         {
+            changedHeight: false,
             title: "Тариф Экстра",
             price: "3 000 000₸",
             descriptions: [
@@ -40,6 +42,7 @@ export default function TariffsLargeBusinesses() {
             ],
         },
         {
+            changedHeight: true,
             title: "Тариф Индивидуальный",
             price: "<span class='price-litte'>от</span> 3 000 000₸",
             descriptions: [
@@ -48,7 +51,7 @@ export default function TariffsLargeBusinesses() {
                 "Годовой оборот компании без ограничении.",
             ],
             advantages: [
-                "Индивидуально, полное сопровождение под ключ",
+                "Индивидуально, полное сопровождение <br/> под ключ",
             ],
         },
     ];
@@ -60,7 +63,7 @@ export default function TariffsLargeBusinesses() {
             </h2>
             <div className="tariffs-large__cards">
                 {cardsInfoArr.map((card) => (
-                    <CardTemplate key={card.title}  isGreen={true} isGray={false}>
+                    <CardTemplate key={card.title} isChangedHeight={card.changedHeight} isGreen={true} isGray={false}>
                         <>
                             <div className="card-template-green__top">
                                 <h3 className="card-template-green__top_title">{card.title}</h3>

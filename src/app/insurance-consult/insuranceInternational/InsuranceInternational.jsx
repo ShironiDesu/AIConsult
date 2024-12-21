@@ -114,7 +114,7 @@ export default function InsuranceInternational() {
 
             <div className="insurance-international__cards">
                 {cardsInfoArr.map((card) => (
-                    <CardTemplate key={card.title} isFixHeight={false} isGreen={false} isGray={true}>
+                    <CardTemplate key={card.title} isFixHeight={true} isGreen={false} isGray={true}>
                         <>
                             <div className="card-template-gray__top">
                                 <h3 className="card-template-gray__top_title">{card.title}</h3>

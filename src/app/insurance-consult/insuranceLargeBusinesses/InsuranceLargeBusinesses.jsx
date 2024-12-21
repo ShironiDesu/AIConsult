@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function InsuranceLargeBusinesses() {
     const cardsInfoArr = [
-        {
+        {   
             title: "Тариф старт",
             price: "250 000₸",
             complianceCriterions: [
@@ -34,7 +34,7 @@ export default function InsuranceLargeBusinesses() {
                 },
             ],
         },
-        {
+        {   
             title: "Тариф базовый",
             price: "350 000₸",
             complianceCriterions: [
@@ -63,7 +63,7 @@ export default function InsuranceLargeBusinesses() {
                 },
             ],
         },
-        {
+        {   
             title: "Тариф Основной",
             price: "<span class='price-litte'>от</span> 650 000₸",
             complianceCriterions: [
