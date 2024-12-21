@@ -1,9 +1,10 @@
-import React from 'react'
-import "./workListScreen.scss"
-import CardTemplate from '@/componets/cardTemplate/CardTemplate'
-import Image from 'next/image'
+import React from "react";
+import "./workListScreen.scss";
+import CardTemplate from "@/componets/cardTemplate/CardTemplate";
+import Image from "next/image";
 
 export default function WorkListScreen() {
+
 
     const cardsInfoArr = [
         {
@@ -82,7 +83,14 @@ export default function WorkListScreen() {
             ))}
         </div>
 
-        <Image src="/images/credit-screen-second-bg.png" className='work-list__shine_bg' width={1440} height={984} layout='responsive' alt='credit screen second bg png'/>
+      <Image
+        src="/images/credit-screen-second-bg.png"
+        className="work-list__shine_bg"
+        width={1440}
+        height={984}
+        layout="responsive"
+        alt="credit screen second bg png"
+      />
     </div>
-  )
+  );
 }

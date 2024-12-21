@@ -1,92 +1,42 @@
 .credit-consult {
-    width: 100%;
-    position: relative;
-    min-height: 760px;
-    padding: 239px 80px 173px;
+  width: 100%;
+  position: relative;
+  min-height: 760px;
+  padding: 239px 80px 173px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-image: url("/images/credit_screen.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  &__left {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-image: url("/images/credit_screen.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
+    flex-direction: column;
+    gap: 82px;
 
-    &__left {
-        display: flex;
-        flex-direction: column;
-        gap: 82px;
-
-        &-title {
-            font-family: var(--euclid-circular);
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 54.24px;
-            background: linear-gradient(158.22deg, #FFFFFF 7.25%, rgba(153, 153, 153, 0.37) 87.33%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        &-description {
-            font-family: Arial;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 25.3px;
-            color: rgba(255, 255, 255, 1);     
-            opacity: 0.7; 
-        }
-        
+    &-title {
+      font-family: var(--euclid-circular);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 54.24px;
+      background: linear-gradient(
+        158.22deg,
+        #ffffff 7.25%,
+        rgba(153, 153, 153, 0.37) 87.33%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-
-    &__btn {
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-        font-family:  var(--euclid-circular);
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 25.36px;
-        gap: 10;
-        color: rgba(255, 255, 255, 1);
-        border-radius: 12px;
-        padding: 10px 26px;
-        background: linear-gradient(0deg, #56965C 0%, #76DC7F 100%);
-        border: 0;
-        
-
-        &::after {
-            content: "";
-            top: -7;
-            right: -7;
-            width: 244px;
-            height: 56px;
-            position: absolute;
-            z-index: 1;
-            background-image: url("/images/credit_screen_btn-border.png");
-        }
-
-        &::before {
-            content: "";
-            top: -2;
-            border-radius: 12px;
-            right: -2;
-            width: calc(100% + 2px);
-            height: calc(100% + 2px);
-            position: absolute;
-            border: 1px solid;
-            z-index: -1;
-            // box-shadow: 0px 3px 7px 0px rgba(0, 92, 6, 0.62);
-            // box-shadow: 0px 13px 13px 0px rgba(0, 92, 9, 0.54);
-            // box-shadow: 0px 30px 18px 0px rgba(0, 92, 12, 0.32);
-            // box-shadow: 0px 53px 21px 0px rgba(0, 92, 15, 0.09);
-            // box-shadow: 0px 84px 23px 0px rgba(0, 92, 15, 0.01);
-            background: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 24.33%, #479F5D 74.32%);
-        }
-
-        &-vector {
-            width: 11px;
-            height: 11px;
-        }
+    &-description {
+      font-family: Arial;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 25.3px;
+      color: rgba(255, 255, 255, 1);
+      opacity: 0.7;
     }
-
+  }
 }

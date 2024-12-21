@@ -1,0 +1,56 @@
+.contact-us__btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-family: var(--euclid-circular);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.36px;
+  gap: 10;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  padding: 10px 26px;
+  box-shadow: 0px 14px 20px 0px rgba(118, 220, 127, 0.2);
+  max-width: 244px;
+  align-self: flex-end;
+  background: linear-gradient(0deg, #56965c 0%, #76dc7f 100%);
+  border: 0;
+
+  //   &::after {
+  //     content: "";
+  //     top: -7;
+  //     right: -7;
+  //     width: 244px;
+  //     height: 56px;
+  //     position: absolute;
+  //     z-index: 1;
+  //     background-image: url("/images/credit_screen_btn-border.png");
+  //     border: 0;
+  //   }
+
+  //   &::before {
+  //     content: "";
+  //     top: -2;
+  //     border-radius: 12px;
+  //     right: -2;
+  //     width: calc(100% + 2px);
+  //     height: calc(100% + 2px);
+  //     position: absolute;
+  //     // border: 1px solid;
+  //     border: 0;
+  //     z-index: -1;
+
+  //     background: radial-gradient(
+  //       100% 100% at 50% 0%,
+  //       #ffffff 0%,
+  //       rgba(255, 255, 255, 0.4) 24.33%,
+  //       #479f5d 74.32%
+  //     );
+  //   }
+
+  &-vector {
+    width: 11px;
+    height: 11px;
+  }
+}
