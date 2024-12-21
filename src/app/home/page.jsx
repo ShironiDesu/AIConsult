@@ -3,6 +3,7 @@ import "./page.scss"
 
 export default function Home() {
   return (
+
     <div className="background">
       <div className="container">
         <main className="homepage__main">
@@ -12,5 +13,6 @@ export default function Home() {
     </div>
     
     
+
   );
 }
