@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function CardTemplate({children, isGreen, isGray, isFixHeight}) {
   return (
-    <div className={`${isGreen ? "card-template-green" : isGray ? "card-template-gray" : "card-template"} ${isFixHeight && "fix-height"}`}>
+    <div className={`${isGreen ? "card-template-green" : isGray ? "card-template-gray" : "card-template"} ${isFixHeight ? "fix-height" : ""}`}>
       {children}
     </div>
   )
