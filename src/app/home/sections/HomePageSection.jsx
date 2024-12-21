@@ -10,6 +10,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "consulting-card",
+      link: "/tax-consulting",
     },
     {
       img: "/images/HomeIcon2.svg",
@@ -18,6 +19,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "guarantee-card",
+      link: "/insurance-consult",
     },
     {
       img: "/images/HomeIcon3.svg",
@@ -25,6 +27,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "insurance-card",
+      link: "/support-consult",
     },
     {
       img: "/images/HomeIcon4.svg",
@@ -32,6 +35,7 @@ export default function HomePageSection() {
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       grayText: "Оказание поддержки в получении кредитных продуктов",
       classname: "credit-card",
+      link: "/credit-consult",
     },
     {
       img: "/images/HomeIcon5.svg",
@@ -39,6 +43,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "legal-card",
+      link: "/legal-consulting",
     },
     {
       img: "/images/HomeIcon6.svg",
@@ -46,6 +51,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "accounting-card",
+      link: "/accounting-consulting",
     },
   ];
 
@@ -65,6 +71,7 @@ export default function HomePageSection() {
           whiteText={data.whiteText}
           grayText={data.grayText}
           classname={data.classname}
+          link={data.link}
         />
       ))}
     </div>
