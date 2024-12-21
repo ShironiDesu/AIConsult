@@ -119,7 +119,7 @@ export default function StartupsInsurance() {
 
             <div className="startups-insurance__cards">
                 {cardsInfoArr.map((card) => (
-                    <CardTemplate key={card.title} isGreen={false} isGray={false}>
+                    <CardTemplate key={card.title} isFixHeight={true} isGreen={false} isGray={false}>
                         <>
                             <div className="card-template__top">
                                 <h3 className="card-template__top_title">{card.title}</h3>

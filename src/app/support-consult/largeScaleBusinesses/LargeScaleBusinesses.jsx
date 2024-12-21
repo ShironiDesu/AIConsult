@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function largeScaleBusinesses() {
     const cardsInfoArr = [
         {
+            changedHeight: false,
             title: "Тариф старт",
             price: "1 000 000₸",
             complianceCriterions: [
@@ -33,6 +34,7 @@ export default function largeScaleBusinesses() {
             ],
         },
         {
+            changedHeight: false,
             title: "Тариф базовый",
             price: "1 500 000₸",
             complianceCriterions: [
@@ -66,6 +68,7 @@ export default function largeScaleBusinesses() {
             ],
         },
         {
+            changedHeight: true,
             title: "Тариф Основной",
             price: "<span class='price-litte'>от</span> 1 500 000₸",
             complianceCriterions: [

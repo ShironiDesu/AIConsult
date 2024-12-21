@@ -41,7 +41,7 @@ export default function WorkListScreen() {
             price: "550 000₸",
             descriptions: [
                 "Количество залоговых имуществ: до 8-ми объектов.",
-                "Максимальная сумма кредита: от 100 млн до 150 млн KZT.",
+                "Максимальная сумма кредита: от 100 млн до <br/> 150 млн KZT.",
                 "Годовой оборот компании не должен превышать 500 млн KZT."
             ],
             advantages: [
@@ -65,7 +65,7 @@ export default function WorkListScreen() {
                             <h3 className='card-template__top_price'>{card.price}</h3>
                             <div className='card-template__top_list'>
                                 {card.descriptions.map(desc => (
-                                    <p key={desc} className='card-template__top_list_desc'>{desc}</p>
+                                    <p key={desc}  className='card-template__top_list_desc' dangerouslySetInnerHTML={{ __html: desc }}/>
                                 ))}
                             </div>
                         </div>
