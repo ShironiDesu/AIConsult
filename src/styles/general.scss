@@ -7,6 +7,7 @@
 :root {
   --font-primary: var(--font-plus-jakarta);
   --font-secondary: var(--euclid-circular);
+  --navigation-position: 0px;
 }
 body,
 .container,
@@ -30,9 +31,10 @@ ul {
 .home-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 62 28 0;
+
   position: relative;
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;

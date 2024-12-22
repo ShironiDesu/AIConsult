@@ -28,8 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${plusJakartaSans.variable} ${euclidCircularB.variable} antialiased`}
       >
-
-        <Header/>
+        <Header />
 
         {children}
       </body>

@@ -1,6 +1,10 @@
+@use "../../styles/mixins.scss" as mixins;
 .homepage__main {
   width: 100%;
-  padding-top: 152px;
+  padding-top: 220px;
+  @include mixins.pc {
+    padding-top: 152px;
+  }
 }
 
 .background {

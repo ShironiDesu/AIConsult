@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./contact-us-btn.scss";
 import Image from "next/image";

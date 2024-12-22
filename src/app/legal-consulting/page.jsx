@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./page.scss";
 import LegalCard from "../../componets/consult-pages-cards/LegalCard";
