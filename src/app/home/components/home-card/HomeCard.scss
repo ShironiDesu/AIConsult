@@ -1,3 +1,4 @@
+@use "../../../../styles/mixins" as mixins;
 .homepage__card {
   text-align: center;
   max-width: 298px;
@@ -15,14 +16,62 @@
   box-shadow: 0px 108px 132px 0px rgba(79, 58, 137, 0.25) inset;
   box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.16) inset;
   backdrop-filter: blur(48px);
+  @include mixins.break(1280px) {
+    // max-width: 250px;
+    height: 300px !important;
+    // justify-content: space-between;
+    // gap: 20px;
+    // max-height: 236px;
+  }
+  @include mixins.break(1000px) {
+    padding: 20px 10px 14px;
+    max-width: 260px;
+    height: 300px !important;
+    justify-content: center;
+    // gap: 20px;
+    // max-height: 236px;
+  }
+  @include mixins.tablet {
+    max-width: 220px;
+    height: 280px !important;
+  }
+  @include mixins.mobile-big {
+    max-width: 220px;
+    height: 230px !important;
+  }
+  @include mixins.break(330px) {
+    // max-width: 180px;
+    height: 250px !important;
+  }
+  @include mixins.mobile-min {
+    max-width: 298px;
+
+    height: 298px !important;
+  }
   img {
     height: 60px;
+    @include mixins.tablet {
+      width: 44px;
+      height: 44px;
+    }
   }
   &__white-text {
     color: rgba(255, 255, 255, 1);
     line-height: 24px;
     font-size: 19px;
     font-family: var(--euclid-circular);
+    @include mixins.tablet {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include mixins.break(375px) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+    @include mixins.mobile-min {
+      line-height: 24px;
+      font-size: 19px;
+    }
   }
   &__gray-text {
     color: gray;
@@ -30,28 +79,90 @@
     line-height: 22px;
     font-size: 15px;
     font-weight: 400;
+    @include mixins.tablet {
+      font-size: 13px;
+      line-height: 19px;
+    }
+    @include mixins.break(375px) {
+      font-size: 11px;
+      line-height: 17px;
+    }
+    @include mixins.mobile-min {
+      line-height: 22px;
+      font-size: 15px;
+    }
   }
 }
 .consulting-card {
   grid-area: consulting-card;
+  @include mixins.break(1280px) {
+    margin-top: 90px;
+    justify-self: center;
+  }
+  @include mixins.tablet {
+    margin-top: 50px;
+  }
 }
 
 .guarantee-card {
   grid-area: guarantee-card;
   margin-left: 69px;
   margin-top: 21px;
+  @include mixins.pc {
+    margin-left: 30px;
+  }
+  @include mixins.break(1365px) {
+    margin-left: 0;
+  }
+  @include mixins.break(1280px) {
+    margin-top: 40px;
+    justify-self: center;
+  }
+  @include mixins.break(1065px) {
+    margin-top: 20px;
+  }
+  @include mixins.tablet {
+    margin-top: 10px;
+  }
+  @include mixins.mobile-min {
+    margin-top: 20px;
+  }
 }
 
 .insurance-card {
   margin-top: 57px;
   grid-area: insurance-card;
   justify-self: center;
+  @include mixins.break(1280px) {
+    margin-top: 40px;
+  }
+  @include mixins.break(1065px) {
+    margin-top: 20px;
+  }
+  @include mixins.tablet {
+    margin-top: 10px;
+  }
+  @include mixins.mobile-min {
+    margin-top: 20px;
+  }
 }
 
 .credit-card {
   margin-top: 57px;
   grid-area: credit-card;
   justify-self: center;
+  @include mixins.break(1280px) {
+    margin-top: 40px;
+  }
+  @include mixins.break(1065px) {
+    margin-top: 20px;
+  }
+  @include mixins.tablet {
+    margin-top: 10px;
+  }
+  @include mixins.mobile-min {
+    margin-top: 20px;
+  }
 }
 
 .legal-card {
@@ -59,14 +170,49 @@
   grid-area: legal-card;
   margin-right: 75px;
   margin-top: 21px;
-  height: 298px;
+  max-height: 298px;
+  @include mixins.pc {
+    margin-right: 30px;
+  }
+  @include mixins.break(1365px) {
+    margin-right: 0;
+  }
+  @include mixins.break(1280px) {
+    height: auto;
+    margin-top: 90px;
+    justify-self: center;
+  }
+  @include mixins.tablet {
+    margin-top: 50px;
+  }
+  @include mixins.break(570px) {
+    margin-top: 10px;
+  }
+  @include mixins.mobile-min {
+    margin-top: 20px;
+  }
+
   img {
     width: 66px;
     height: 66px;
+    @include mixins.tablet {
+      width: 44px;
+      height: 44px;
+    }
   }
 }
 
 .accounting-card {
   justify-self: end;
   grid-area: accounting-card;
+  @include mixins.break(1280px) {
+    margin-top: 90px;
+    justify-self: center;
+  }
+  @include mixins.tablet {
+    margin-top: 50px;
+  }
+  @include mixins.mobile-min {
+    margin-top: 20px;
+  }
 }
