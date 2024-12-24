@@ -1,3 +1,4 @@
+@use "../../styles/mixins" as *;
 .consulting__card {
   display: flex;
   align-items: flex-end;
@@ -11,7 +12,14 @@
   border-radius: 13px;
   backdrop-filter: blur(19px);
   padding: 22px;
-
+  @include break(1080) {
+    padding: 20px 10px;
+  }
+  @include break(920px) {
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    flex: 1;
+  }
   &__description {
     text-align: center;
     display: flex;
@@ -23,6 +31,12 @@
     backdrop-filter: blur(45.099998474121094px);
     border-radius: 10px;
     padding: 20px;
+    @include laptop {
+      padding: 20px 10px;
+    }
+    @include break(920px) {
+      padding: 20px 5px;
+    }
     &__title {
       display: inline-flex;
       align-items: center;
