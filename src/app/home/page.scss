@@ -6,11 +6,17 @@
     padding-top: 152px;
   }
 }
-
+#home-background {
+  background-image: url("/images/HomePageBG.jpg");
+  @include mixins.tablet {
+    background-image: url("/images/HomePageBGMobile.jpg");
+    background-position: top;
+  }
+}
 .background {
   width: 100%;
   min-height: 100vh;
-  background-image: url("/images/hero_screen.jpg");
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
