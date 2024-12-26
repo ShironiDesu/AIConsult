@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./page.scss";
 import LegalCard from "../../componets/consult-pages-cards/LegalCard";
 import LegalTitle from "../../componets/consult-pages-titles/LegalTitle";
 export default function page() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const dataTitle = {
     img: "/images/LegalConsultTitleICon.svg",
     h1: "Юридический консалтинг",
@@ -51,27 +63,43 @@ export default function page() {
     },
   ];
   return (
-    <div className="background">
+    <div id="legal-background" className="background">
       <div className="container">
-        <main className="legal-consulting__main">
-          <section className="legal-consulting__main__title">
-            <LegalTitle data={dataTitle} />
-          </section>
-          <section className="legal-consulting__main__cards">
-            <div className="legal-consulting__main__cards__left">
+        {isMobile ? (
+          <main className="legal-consulting__main__mobile">
+            <section className="legal-consulting__main__mobile__title">
+              <LegalTitle data={dataTitle} />
+            </section>
+            <section className="legal-consulting__main__mobile__cards">
               <LegalCard data={dataCard[0]} />
-              <LegalCard data={dataCard[1]} />
-            </div>
-            <div className="legal-consulting__main__cards__middle">
               <LegalCard data={dataCard[2]} />
-              <LegalCard data={dataCard[3]} />
-            </div>
-            <div className="legal-consulting__main__cards__right">
               <LegalCard data={dataCard[4]} />
+              <LegalCard data={dataCard[1]} />
+              <LegalCard data={dataCard[3]} />
               <LegalCard data={dataCard[5]} />
-            </div>
-          </section>
-        </main>
+            </section>
+          </main>
+        ) : (
+          <main className="legal-consulting__main">
+            <section className="legal-consulting__main__title">
+              <LegalTitle data={dataTitle} />
+            </section>
+            <section className="legal-consulting__main__cards">
+              <div className="legal-consulting__main__cards__left">
+                <LegalCard data={dataCard[0]} />
+                <LegalCard data={dataCard[1]} />
+              </div>
+              <div className="legal-consulting__main__cards__middle">
+                <LegalCard data={dataCard[2]} />
+                <LegalCard data={dataCard[3]} />
+              </div>
+              <div className="legal-consulting__main__cards__right">
+                <LegalCard data={dataCard[4]} />
+                <LegalCard data={dataCard[5]} />
+              </div>
+            </section>
+          </main>
+        )}
       </div>
     </div>
   );

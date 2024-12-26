@@ -2,6 +2,7 @@
 import React from "react";
 import "./LegalTitle.scss";
 import Image from "next/image";
+import ContactUsBtn from "../contact-btn/contact-us-btn";
 export default function LegalTitle({ data }) {
   return (
     <div
@@ -13,6 +14,7 @@ export default function LegalTitle({ data }) {
       </div>
       <h1>{data.h1}</h1>
       <p>{data.p}</p>
+      <ContactUsBtn />
     </div>
   );
 }

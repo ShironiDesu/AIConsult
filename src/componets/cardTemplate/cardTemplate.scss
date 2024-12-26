@@ -9,6 +9,7 @@
     backdrop-filter: blur(48px);
     border-radius: 20px;
     transition: 0.4s all ease-in-out;
+
     position: relative;
     width: 411px;
 
@@ -69,6 +70,24 @@
         }
 
 
+      &_title {
+        font-family: var(--euclid-circular);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.08px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        background: linear-gradient(
+          158.22deg,
+          #ffffff 7.25%,
+          rgba(255, 255, 255, 0.64) 87.33%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      }
+
+
         &_title {
             background: linear-gradient(158.22deg, #ffffff 7.25%, rgba(255, 255, 255, 0.64) 87.33%);
             -webkit-background-clip: text;
@@ -90,6 +109,7 @@
                 margin-bottom: 35px;
             }
         }
+
 
         &_price {
             color: rgba(255, 255, 255, 1);
@@ -279,6 +299,7 @@
                     line-height: 21.36px;
                 }
 
+
                 @include mixins.break(880px) {
                     font-size: 16px;
                     line-height: 23.36px;
@@ -378,12 +399,14 @@
 
     }
 
+
     &:hover {
         transform: scaleY(1.042);
         // border: 2px solid rgba(66, 183, 40, 0.15);
         backdrop-filter: blur(48px);
         box-shadow: 0px 0px 18.3px 0px rgba(135, 220, 118, 1);
         transition: 0.4s all ease-in-out;
+
 
         .card-template__top {
             background-repeat: no-repeat;
@@ -417,6 +440,7 @@
 
     @include mixins.break(480px) {
         width: 95%;
+
     }
 }
 
@@ -433,6 +457,7 @@
     
     border-radius: 20px;
     transition: 0.4s all ease-in-out;
+
     position: relative;
     width: 411px;
 
@@ -515,6 +540,44 @@
             @include mixins.break(1030px) {
                 margin-bottom: 20px;
             }
+
+
+    &_criterions {
+      display: flex;
+      flex-direction: column;
+
+      &_title {
+        font-family: var(--euclid-circular);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.08px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        background: linear-gradient(
+          158.22deg,
+          #ffffff 7.25%,
+          rgba(255, 255, 255, 0.64) 87.33%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      }
+
+      &_desc {
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.36px;
+        background: linear-gradient(
+          158.22deg,
+          #ffffff 7.25%,
+          rgba(255, 255, 255, 0.64) 87.33%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
 
             @include mixins.break(880px) {
                 font-size: 20px;
@@ -758,6 +821,7 @@
                     line-height: 21.36px;
                 }
 
+
                 @include mixins.break(880px) {
                     font-size: 16px;
                     line-height: 23.36px;
@@ -826,6 +890,7 @@
         box-shadow: 0px 0px 18.3px 0px rgba(135, 220, 118, 1);
     }
 
+
     @include mixins.break(1330px) {
         width: 360px;
     }
@@ -852,7 +917,7 @@
 }
 
 #changed-height::before {
-    height: 107%;
+  height: 107%;
 }
 
 .fix-height {
@@ -863,7 +928,8 @@
 .card-template-gray {
     display: flex;
     flex-direction: column;
-    background: rgba(79, 58, 137, 0.25);
+
+    background: rgba(7allPagesMobileEmir9, 58, 137, 0.25);
     box-shadow: 0px 108px 132px 0px rgba(79, 58, 137, 0.25) inset;
     box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.16) inset;
     backdrop-filter: blur(48px);
@@ -948,6 +1014,7 @@
             @include mixins.break(1030px) {
                 margin-bottom: 20px;
             }
+
 
             @include mixins.break(880px) {
                 font-size: 20px;
@@ -1070,6 +1137,7 @@
             display: flex;
             gap: 3px;
             flex-direction: column;
+
 
             &__top {
                 display: flex;
@@ -1277,16 +1345,21 @@
         backdrop-filter: blur(48px);
         box-shadow: 0px 0px 18.3px 0px rgba(135, 220, 118, 1);
 
+
         .card-template-gray__top {
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url("/images/card-hover-effect.png");
         }
 
+
         &::before {
             opacity: 32%;
+
         }
     }
+
+
 
     @include mixins.break(1330px) {
         width: 360px;
@@ -1296,8 +1369,10 @@
         width: 310px;
     }
 
+
     @include mixins.break(1030px) {
         width: 270px;
+
     }
 
     @include mixins.break(880px) {

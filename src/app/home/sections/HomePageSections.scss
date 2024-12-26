@@ -1,3 +1,4 @@
+@use "../../../styles/mixins" as mixins;
 .homepage__section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -10,6 +11,44 @@
     "guarantee-card mini-text mini-text legal-card"
     "guarantee-card insurance-card credit-card legal-card";
   align-items: start;
+
+  @include mixins.break(1300px) {
+    gap: 0 10px;
+  }
+  @include mixins.break(1280px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "main-text main-text main-text"
+      "mini-text mini-text mini-text"
+      "consulting-card legal-card accounting-card"
+      "guarantee-card insurance-card credit-card ";
+  }
+  @include mixins.tablet {
+    gap: 10px 10px;
+  }
+  @include mixins.break(570px) {
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "main-text main-text"
+      "mini-text mini-text"
+      "consulting-card accounting-card"
+      "guarantee-card insurance-card"
+      "credit-card legal-card";
+  }
+  @include mixins.mobile-min {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main-text"
+      "mini-text"
+      "consulting-card"
+      "accounting-card"
+      "guarantee-card"
+      "insurance-card"
+      "credit-card"
+      "legal-card";
+  }
   h1 {
     grid-area: main-text;
     align-self: self-end;
@@ -21,6 +60,10 @@
     background: linear-gradient(108.59deg, #ffffff 21.47%, #969696 72.18%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include mixins.mobile-big {
+      font-size: 30px;
+      line-height: 34px;
+    }
   }
   h5 {
     margin-top: 24px;
@@ -30,5 +73,13 @@
     line-height: 25px;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+    @include mixins.break(1280px) {
+      margin-top: 28px;
+    }
+    @include mixins.mobile-big {
+      font-size: 17px;
+      line-height: 19px;
+    }
   }
 }

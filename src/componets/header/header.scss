@@ -1,3 +1,5 @@
+@use "../../styles/mixins.scss" as mixins;
+
 .header {
   position: fixed;
   width: 100%;
@@ -6,8 +8,14 @@
   align-items: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgb(0, 0, 0);
-  z-index: 20;
-
+  z-index: 60;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  @include mixins.tablet {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  @include mixins.mobile-big {
+    height: 68px;
+  }
   .header__logo {
     display: flex;
     align-items: center;
@@ -19,6 +27,16 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 25.2px;
+
+      @include mixins.break(1100px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @include mixins.break(900px) {
+        font-size: 17px;
+        line-height: 21px;
+      }
 
       &::before {
         position: absolute;
@@ -37,7 +55,25 @@
   .header__navigation {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    // gap: 50px;
+
+    color: rgba(31, 126, 22, 1);
+
+    // @include mixins.break(1100px) {
+    //   gap: 30px;
+    // }
+
+    // @include mixins.break(976px) {
+    //   gap: 20px;
+    // }
+
+    // @include mixins.break(878px) {
+    //   gap: 15px;
+    // }
+
+    @include mixins.tablet {
+      display: none;
+    }
 
     &__card {
       display: flex;
@@ -47,16 +83,40 @@
       opacity: 0.35;
       transition: 0.4s all ease-in-out;
       cursor: pointer;
-      padding: 0 10px;
+      padding: 0 35px;
+      @include mixins.break(1240px) {
+        padding: 0 25px;
+      }
+      @include mixins.break(1000px) {
+        padding: 0 20px;
+      }
+      @include mixins.break(940px) {
+        padding: 0 15px;
+      }
+      @include mixins.break(830px) {
+        padding: 0 10px;
+      }
+      &:hover {
+        color: rgb(148, 218, 128);
+        opacity: 1;
+      }
     }
 
     &__number {
-      color: rgba(148, 218, 128, 1);
+      opacity: 0.4;
+      color: rgba(31, 126, 22, 1);
+    }
+
+    &__title {
+      @include mixins.break(878px) {
+        font-size: 12px;
+      }
     }
 
     &__card--active {
       opacity: 1;
       position: relative;
+      color: rgba(255, 255, 255, 1);
 
       &::before {
         content: "";
@@ -73,5 +133,192 @@
   .container {
     display: flex;
     gap: 120px;
+    padding-left: 64px;
+
+    @include mixins.break(1200px) {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    @include mixins.break(1100px) {
+      padding-left: 40px;
+    }
+
+    @include mixins.laptop {
+      padding-left: 15px;
+    }
+  }
+}
+
+.header__navigation__separator {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.header__navigation__p {
+  // min-width: 467px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 26px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  max-width: 467px;
+  @include mixins.break(1350px) {
+    max-width: 300px;
+  }
+  @include mixins.break(1001px) {
+    max-width: 250px;
+  }
+  @include mixins.break(840) {
+    max-width: 200px;
+  }
+}
+
+.custom-style-menu {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  backdrop-filter: blur(18.5px);
+}
+
+.hide {
+  display: none;
+}
+
+.font-custom {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__burger {
+  display: none;
+  justify-content: space-between;
+  width: 29px;
+  flex-direction: column;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  @include mixins.tablet {
+    display: flex;
+    margin-right: 29px;
+  }
+}
+
+.header__burger__top,
+.header__burger__mid,
+.header__burger__bottom {
+  background-color: rgba(255, 255, 255, 1);
+  height: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.header__burger__top {
+  width: 100%;
+}
+
+.header__burger__mid {
+  width: 100%;
+}
+
+.header__burger__bottom {
+  width: 50%;
+  align-self: flex-end;
+}
+.header__burger__top.open {
+  width: 0%; /* Уменьшаем ширину */
+  transform: rotate(45deg); /* Поворот верхней полоски */
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.header__burger__bottom.open {
+  width: 0%; /* Уменьшаем ширину */
+  transform: rotate(-45deg); /* Поворот нижней полоски */
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.header__burger__mid.open {
+  opacity: 0; /* Убираем середину */
+  transition: opacity 0.3s ease;
+}
+.header__burger__img {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+.header__burger__img.open {
+  opacity: 1;
+}
+.header__navigation__mobile {
+  padding-top: 50px;
+  color: rgba(31, 126, 22, 1);
+
+  &__card {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    &--active {
+      opacity: 1;
+      position: relative;
+      color: rgba(255, 255, 255, 1);
+
+      // &:hover {
+      //   color: rgb(148, 218, 128);
+      //   opacity: 1;
+      // }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: rgba(42, 246, 152, 1);
+      }
+    }
+    &__title {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+    }
+    &__number {
+      // padding: 28px 48px 28px;
+      padding-left: 48px;
+      opacity: 0.4;
+      padding-bottom: 28px;
+      padding-top: 28px;
+    }
+    &__accordion__content {
+      padding: 9px 50px 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      &__number {
+        font-weight: 400;
+        line-height: 19px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(255, 255, 255, 1);
+        opacity: 0.06;
+      }
+      &__title {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(255, 255, 255, 1);
+        opacity: 0.7;
+        font-weight: 400;
+        line-height: 23px;
+        font-size: 15px;
+        // text-align: left;
+      }
+    }
   }
 }
