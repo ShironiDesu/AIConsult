@@ -181,12 +181,12 @@ export default function InsuranceTenderers() {
         ))}
       </div>
 
-      <Image
+      {/* <Image
         src="/images/credit-screen-second-bg.png"
         className="insurance-tenderers__shine_bg"
         layout="fill"
         alt="insurance tenderers fourth bg png"
-      />
+      /> */}
     </div>
   );
 }

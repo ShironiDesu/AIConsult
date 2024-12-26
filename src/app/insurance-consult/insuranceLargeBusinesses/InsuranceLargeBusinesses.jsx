@@ -168,12 +168,12 @@ export default function InsuranceLargeBusinesses() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="insurance-large__shine_bg"
                 layout="fill"
                 alt="insurance large fourth bg png"
-            />
+            /> */}
         </div>
     );
 }

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./page.scss";
 import LegalCard from "../../componets/consult-pages-cards/LegalCard";
 import LegalTitle from "../../componets/consult-pages-titles/LegalTitle";
+import Footer from "@/componets/footer/Footer";
 export default function page() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -92,6 +93,7 @@ export default function page() {
           </main>
         )}
       </div>
+      <Footer/>
     </div>
   );
 }

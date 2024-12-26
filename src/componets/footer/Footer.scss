@@ -48,13 +48,17 @@
   min-height: auto;
 }
 
-.background {
+.background-foot {
   width: 100%;
 
-  // background-image: url("/images/FooterBg.jpg");
+  background-image: url("/images/FooterBg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include break(600px) {
+    background-position: right;
+  }
 }
 .footer_input__message {
   opacity: 0;

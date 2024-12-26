@@ -8,10 +8,7 @@
     gap: 76px;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/insurance-consult-screen.jpg");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
     z-index: 0;
 
     &__title {
@@ -47,6 +44,23 @@
             flex-direction: column;
             justify-content: flex-start;
             gap: 12px;
+        }
+
+        &-column__third {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include mixins.break(880px) {
+                .contact-us__btn {
+                    align-self: flex-start;
+                }
+            }
+
+            @include mixins.break(700px) {
+                gap: 0;
+            }
         }
 
         p {
@@ -120,10 +134,11 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 42px;
-        // background-image: url("/images/credit_screen.png");
+        background-position: 70% center;
+        background-image: url("/images/insurance-consult-screen.jpg");
         // background-position: top;
-        // background-size: cover;
-        // background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     @include mixins.break(600px) {

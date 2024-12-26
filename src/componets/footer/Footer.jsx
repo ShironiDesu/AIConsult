@@ -29,7 +29,7 @@ const formSchema = z.object({
     }),
 });
 
-export default function Footer() {
+export default function Footer({}) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,7 +40,8 @@ export default function Footer() {
   });
 
   return (
-    <div id="footer-background" className="background">
+    // className={isBgExists ? "background" : ""}
+    <div id="footer-background" className="background-foot">
       <div className="container">
         <div className="footer">
           <p className="footer__title">Связаться с нами</p>

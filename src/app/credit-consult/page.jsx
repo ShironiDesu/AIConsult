@@ -4,6 +4,7 @@ import WorkListScreen from "./workListScreen/WorkListScreen";
 import "./page.scss"
 import TariffsMediumBusinesses from "./tariffsMediumBusinesses/TariffsMediumBusinesses";
 import TariffsLargeBusinesses from "./tariffsLargeBusinesses/TariffsLargeBusinesses";
+import Footer from "@/componets/footer/Footer";
 
 export default function page() {
     return (
@@ -12,6 +13,7 @@ export default function page() {
           <WorkListScreen />
           <TariffsMediumBusinesses/>
           <TariffsLargeBusinesses/>
+          <Footer/>
         </div>
     );
 }

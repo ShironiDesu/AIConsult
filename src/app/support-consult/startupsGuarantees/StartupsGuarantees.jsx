@@ -143,12 +143,12 @@ export default function StartupsGuarantees() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="startups-guarantees__shine_bg"
                 layout="fill"
                 alt="startups guarantees second bg png"
-            />
+            /> */}
         </div>
     );
 }

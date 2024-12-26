@@ -169,12 +169,12 @@ export default function InsuranceInternational() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="insurance-international__shine_bg"
                 layout="fill"
                 alt="insurance international fourth bg png"
-            />
+            /> */}
         </div>
     );
 }

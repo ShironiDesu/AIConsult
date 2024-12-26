@@ -5,16 +5,19 @@ import StartupsGuarantees from "./startupsGuarantees/StartupsGuarantees";
 import TenderParticipant from "./tenderParticipants/TenderParticipants";
 import LargeScaleBusinesses from "./largeScaleBusinesses/LargeScaleBusinesses";
 import InternationalСompanies from "./internationalСompanies/InternationalСompanies";
+import Footer from "@/componets/footer/Footer";
 
 
 export default function page() {
     return (
-        <div className="container before-after-shadow">
+        <div className="container before-after-shadow second-page-bg">
             <SupportProviding/>
             <StartupsGuarantees/>
             <TenderParticipant/>
             <LargeScaleBusinesses/>
             <InternationalСompanies/>
+            <Footer/>
+            <div className="smooth-transition"></div>
         </div>
     );
 }

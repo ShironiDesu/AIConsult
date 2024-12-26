@@ -141,12 +141,12 @@ export default function TenderParticipant() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="tender-participant__shine_bg"
                 layout="fill"
                 alt="tender participant third bg png"
-            />
+            /> */}
         </div>
     );
 }

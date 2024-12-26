@@ -7,10 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-image: url("/images/support-screen.jpg");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
   z-index: 0;
 
   &__left {
@@ -65,6 +61,11 @@
 
     @include mixins.break(880px) {
       gap: 50px;
+
+      background-image: url("/images/support-screen.jpg");
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     @include mixins.break(600px) {

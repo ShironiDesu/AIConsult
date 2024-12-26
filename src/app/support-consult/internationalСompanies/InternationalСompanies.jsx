@@ -152,12 +152,12 @@ export default function InternationalСompanies() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="international-companies__shine_bg"
                 layout="fill"
                 alt="international companies fifth bg png"
-            />
+            /> */}
         </div>
     );
 }

@@ -151,12 +151,12 @@ export default function largeScaleBusinesses() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="scale-businesses__shine_bg"
                 layout="fill"
                 alt="scale businesses fourth bg png"
-            />
+            /> */}
         </div>
     );
 }

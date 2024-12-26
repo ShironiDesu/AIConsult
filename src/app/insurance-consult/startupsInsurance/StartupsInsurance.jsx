@@ -169,12 +169,12 @@ export default function StartupsInsurance() {
                 ))}
             </div>
 
-            <Image
+            {/* <Image
                 src="/images/credit-screen-second-bg.png"
                 className="startups-insurance__shine_bg"
                 layout="fill"
                 alt="startups insurance fourth bg png"
-            />
+            /> */}
         </div>
     );
 }

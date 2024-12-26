@@ -71,18 +71,18 @@
         }
     }
 
-    &__shine_bg {
-        position: absolute;
-        object-fit: cover;
-        height: 100%;
-        left: 0;
-        top: 0;
-        pointer-events: none;
+    // &__shine_bg {
+    //     position: absolute;
+    //     object-fit: cover;
+    //     height: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     pointer-events: none;
 
-        @include mixins.break(880px) {
-            display: none;
-        }
-    }
+    //     @include mixins.break(880px) {
+    //         display: none;
+    //     }
+    // }
 
     @include mixins.pc {
         padding: 34px 40px 97px;
