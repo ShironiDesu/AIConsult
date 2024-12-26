@@ -1,3 +1,5 @@
+@use "../../../styles/mixins.scss" as mixins;
+
 .tender-participant {
     width: 100%;
     position: relative;
@@ -18,12 +20,56 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 1;
+
+        @include mixins.break(1030px) {
+            font-size: 38px;
+            font-weight: 400;
+            line-height: 42.72px;
+        }
+
+        @include mixins.break(600px) {
+            font-size: 30px;
+            line-height: 34.38px;
+        }
+
+        @include mixins.break(480px) {
+            font-size: 26px;
+            line-height: 29.38px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &__cards {
         display: flex;
         padding-top: 74px;
         gap: 20px;
+
+        @include mixins.break(1030px) {
+            padding-top: 45px;
+            // gap: 15px;
+        }
+
+        @include mixins.break(880px) {
+            flex-direction: column;
+            width: 70%;
+            gap: 35px;
+            align-items: center;
+        }
+
+        @include mixins.break(650px) {
+            width: 90%;
+        }
+
+        @include mixins.break(480px) {
+            padding-top: 30px;
+        }
+
+        @include mixins.break(380px) {
+            width: 100%;
+        }
     }
 
     &__shine_bg {
@@ -33,5 +79,34 @@
         left: 0;
         top: 0;
         pointer-events: none;
+
+        @include mixins.break(880px) {
+            display: none;
+        }
+    }
+
+    @include mixins.pc {
+        padding: 34px 40px 97px;
+    }
+
+    @include mixins.break(1330px) {
+        padding: 34px 15px 97px;
+    }
+
+    @include mixins.break(1180px) {
+        padding: 34px 10px 80px;
+        min-height: auto;
+    }
+
+    @include mixins.break(1030px) {
+        padding: 25px 10px 55px;
+    }
+
+    @include mixins.break(600px) {
+        padding: 25px 0 55px;
+    }
+
+    @include mixins.break(480px) {
+        padding: 40px 10px 40px;
     }
 }

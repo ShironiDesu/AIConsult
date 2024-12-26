@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import "./tariffsLargeBusinesses.scss";
 import CardTemplate from "@/componets/cardTemplate/CardTemplate";
@@ -70,7 +71,7 @@ export default function TariffsLargeBusinesses() {
                                 <h3 className="card-template-green__top_price" dangerouslySetInnerHTML={{ __html: card.price }}/>
                                 <div className="card-template-green__top_list">
                                     {card.descriptions.map((desc) => (
-                                        <p key={desc} dangerouslySetInnerHTML={{ __html: desc }} className="card-template__top_list_desc"/>
+                                        <p key={desc} dangerouslySetInnerHTML={{ __html: desc }} className="card-template-green__top_list_desc"/>
                                     ))}
                                 </div>
                             </div>
@@ -82,6 +83,7 @@ export default function TariffsLargeBusinesses() {
                                             src="/images/advantage_tick.png"
                                             width={24}
                                             height={24}
+                                            layout="fixed"
                                             alt="advantage tick png"
                                         />
                                         <p key={adv} dangerouslySetInnerHTML={{ __html: adv }} className="card-template-green__bottom_advatage_text"/>

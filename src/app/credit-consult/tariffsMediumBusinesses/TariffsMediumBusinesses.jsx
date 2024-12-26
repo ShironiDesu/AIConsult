@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import "./tariffsMediumBusinesses.scss"
 import CardTemplate from '@/componets/cardTemplate/CardTemplate'
@@ -84,7 +85,8 @@ export default function TariffsMediumBusinesses() {
                 </CardTemplate>
             ))}
         </div>
-        <Image src="/images/credit-screen-second-bg.png" className='tariffs-medium__shine_bg' width={1440} height={984} layout='responsive' alt='credit screen second bg png'/>
+        {/* <Image src="/images/credit-screen-third-bg.png" className='tariffs-medium__shine_bg'  layout='fill' alt='credit screen second bg png'/> */}
+
     </div>
   )
 }
