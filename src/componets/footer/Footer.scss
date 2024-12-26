@@ -1,9 +1,18 @@
+@use "../../styles/mixins.scss" as *;
 .footer {
   padding: 97px 80px 113px;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 50px;
+  // height: 100lvh;
+  @include break(600px) {
+    padding: 97px 40px 113px;
+  }
+  @include mobile-big {
+    padding: 0 17px 130px;
+    gap: 48px;
+  }
   &__title {
     font-size: 48px;
     line-height: 54px;
@@ -15,6 +24,11 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include mobile-big {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29px;
+    }
   }
   &__form {
     display: flex;
@@ -24,6 +38,9 @@
     .contact-us__btn {
       margin-top: 50px;
       align-self: flex-start;
+      @include mobile-big {
+        margin-top: 6px;
+      }
     }
   }
 }
@@ -88,6 +105,8 @@
   position: relative;
 
   textarea {
+    resize: none;
+    // overflow:;
     background: none;
     font-size: 18px;
     width: 100%;

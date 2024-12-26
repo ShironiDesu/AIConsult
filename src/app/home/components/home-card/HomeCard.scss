@@ -16,6 +16,7 @@
   box-shadow: 0px 108px 132px 0px rgba(79, 58, 137, 0.25) inset;
   box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.16) inset;
   backdrop-filter: blur(48px);
+  transition: transform 0.3s ease;
   @include mixins.break(1280px) {
     // max-width: 250px;
     height: 300px !important;
@@ -55,6 +56,12 @@
       height: 44px;
     }
   }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
   &__white-text {
     color: rgba(255, 255, 255, 1);
     line-height: 24px;

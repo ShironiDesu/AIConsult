@@ -25,6 +25,7 @@
       "guarantee-card insurance-card credit-card ";
   }
   @include mixins.tablet {
+    gap: 10px 10px;
   }
   @include mixins.break(570px) {
     padding: 10px;

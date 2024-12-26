@@ -1,3 +1,4 @@
+@use "../../styles/mixins.scss" as *;
 .contact-us__btn {
   display: flex;
   align-items: center;
@@ -16,6 +17,10 @@
   align-self: flex-end;
   background: linear-gradient(0deg, #56965c 0%, #76dc7f 100%);
   border: 0;
+  @include mobile-big {
+    font-size: 17px;
+    line-height: 21px;
+  }
   &:hover {
     &::after {
       top: 1;

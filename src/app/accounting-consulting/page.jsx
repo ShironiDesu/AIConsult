@@ -22,34 +22,34 @@ export default function page() {
   };
   const dataCard = [
     {
-      bgImg: "",
+      bgImg: "/images/TaxBg(1).png",
       img: "/images/ConsultLaw.svg",
       whiteText: "Ведение бухгалтерского учета",
       grayText:
         "полное или частичное сопровождение учета для компаний любого масштаба.",
     },
     {
-      bgImg: "LegalConsultLow",
+      bgImg: "/images/TaxBg(2).png",
       img: "/images/ConsultCourt.svg",
       whiteText: "Восстановление учета",
       grayText:
         "приведение документации в порядок в случае пропусков или ошибок.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxBg(3).png",
       img: "/images/ConsultCertificate.svg",
       whiteText: "Составление и сдача отчетности",
       grayText:
         "подготовка бухгалтерской, налоговой и финансовой отчетности в соответствии с законодательством.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxBg(4).png",
       img: "/images/ConsultPencil.svg",
       whiteText: "Аудит бухгалтерского учета",
       grayText: "проверка правильности ведения учета и выявление ошибок.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxBg(5).png",
       img: "/images/ConsultHammer.svg",
       whiteText: "Оптимизация учета",
       grayText: "автоматизация процессов и снижение издержек на бухгалтерию.",
