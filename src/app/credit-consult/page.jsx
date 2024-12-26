@@ -7,7 +7,7 @@ import TariffsLargeBusinesses from "./tariffsLargeBusinesses/TariffsLargeBusines
 
 export default function page() {
     return (
-        <div className="container before-after-shadow">
+        <div className="container before-after-shadow first-page-bg">
           <CreditProviding />
           <WorkListScreen />
           <TariffsMediumBusinesses/>

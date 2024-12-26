@@ -1,10 +1,14 @@
+@use "../../styles/mixins.scss" as mixins;
+
 .black-advantages {
-    min-width: 1029px;
+    // min-width: 71.5%;
+    width: 1029px;
     margin-top: 27px;
-    position: relative;
     display: flex;
-    padding: 25px 97px 25px 42px;
-    justify-content: space-around;
+    gap: 13px;
+    // padding: 15px 97px 15px 42px;
+    padding: 15px 55px 15px 55px;
+    justify-content: space-between;
     align-items: center;
     border-radius: 51px;
     z-index: 2;
@@ -18,25 +22,51 @@
         font-weight: 400;
         line-height: 20.29px;
         color: rgba(148, 218, 128, 1);
+    }
 
-        span {
-            
+    @include mixins.break(1180px) {
+        padding: 15px 35px;
+        width: 95%;
+    }
 
+    @include mixins.break(760px) {
+        flex-direction: column;
+        align-items: center;
+        font-size: 17px;
+        padding: 17px;
+        width: 75%;
+
+        br {
+            display: none;
         }
     }
 
-    
+    @include mixins.break(450px) {
+        width: 90%;
+    }
+}
 
-    &::before {
-        position: absolute;
-        width: 64.9%;
-        height: 58px;
-        border-radius: 26px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        content: "";
-        bottom: -9px;
-        left: 50%;
-        transform: translate(-50%);
-        z-index: -10;
+#thicker {
+    padding: 25px 55px;
+
+    @include mixins.break(1180px) {
+        padding: 25px 35px;
+        width: 90%;
+    }
+
+    @include mixins.break(760px) {
+        flex-direction: column;
+        align-items: center;
+        font-size: 17px;
+        padding: 17px;
+        width: 70%;
+
+        br {
+            display: none;
+        }
+    }
+
+    @include mixins.break(450px) {
+        width: 90%;
     }
 }

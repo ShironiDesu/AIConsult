@@ -10,8 +10,8 @@ export default function SupportProviding() {
         <h1 className="support-consult__left-title">
           Оказание поддержки <br />
           в получении банковских <br />
-          гарантии для юридических <br />
-          лиц
+          гарантии для <br />
+          юридических лиц
         </h1>
 
         <p className="support-consult__left-description">

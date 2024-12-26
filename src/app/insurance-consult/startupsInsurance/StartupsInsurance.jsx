@@ -115,7 +115,7 @@ export default function StartupsInsurance() {
                 Малого бизнеса и ИП
             </h2>
 
-            <BlackAdvantagesTemplate infos={descBlackTemplate}/>
+            <BlackAdvantagesTemplate isThicker={true} infos={descBlackTemplate}/>
 
             <div className="startups-insurance__cards">
                 {cardsInfoArr.map((card) => (
