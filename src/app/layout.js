@@ -3,9 +3,9 @@ import "@/styles/reset.css";
 import "@/styles/globals.css";
 import "@/styles/general.scss";
 import localFont from "next/font/local";
-import Header from "@/componets/header/Header";
-import Footer from "@/componets/footer/Footer";
-import Preloader from "@/componets/preloader/preloader";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
+import Preloader from "@/components/preloader/preloader";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",

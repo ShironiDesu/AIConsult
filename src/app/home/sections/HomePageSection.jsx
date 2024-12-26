@@ -19,7 +19,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "guarantee-card",
-      link: "/insurance-consult",
+      link: "/bank-guarantees",
     },
     {
       img: "/images/HomeIcon3.svg",
@@ -27,7 +27,7 @@ export default function HomePageSection() {
       grayText:
         "Оказание поддержки в получении кредитных продуктов для юридических лиц",
       classname: "insurance-card",
-      link: "/support-consult",
+      link: "/getting-insurance",
     },
     {
       img: "/images/HomeIcon4.svg",

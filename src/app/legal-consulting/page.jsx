@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./page.scss";
-import LegalCard from "../../componets/consult-pages-cards/LegalCard";
-import LegalTitle from "../../componets/consult-pages-titles/LegalTitle";
-import Footer from "@/componets/footer/Footer";
+import LegalCard from "../../components/consult-pages-cards/LegalCard";
+import LegalTitle from "../../components/consult-pages-titles/LegalTitle";
+import Footer from "@/components/footer/Footer";
 export default function page() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -23,41 +23,41 @@ export default function page() {
   };
   const dataCard = [
     {
-      bgImg: "",
+      bgImg: "/images/LegalCardBg(1).jpg",
       img: "/images/ConsultLaw.svg",
       whiteText: "Подача исков",
       grayText:
         "подготовка и подача исков в суды, сопровождение судебного процесса.",
     },
     {
-      bgImg: "LegalConsultLow",
+      bgImg: "/images/LegalCardBg(2).jpg",
       img: "/images/ConsultCourt.svg",
       whiteText: "Судебное сопровождение",
       grayText: "полное сопровождение споров на всех стадиях.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/LegalCardBg(3).jpg",
       img: "/images/ConsultCertificate.svg",
       whiteText: "Получение лицензий",
       grayText:
         "оформление лицензий для ведения определенных видов деятельности.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/LegalCardBg(4).jpg",
       img: "/images/ConsultPencil.svg",
       whiteText: "Договорное право",
       grayText:
         "помощь в составлении, анализе и ведении переговоров по договорам.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/LegalCardBg(5).jpg",
       img: "/images/ConsultHammer.svg",
       whiteText: "Юридическая помощь",
       grayText:
         "консультирование по правовым вопросам, составление и проверка договоров, правовая защита интересов.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/LegalCardBg(6).jpg",
       img: "/images/ConsultSword.svg",
       whiteText: "Защита активов и управление рисками",
       grayText: "юридическая поддержка по минимизации рисков и защите активов.",
@@ -102,7 +102,7 @@ export default function page() {
           </main>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

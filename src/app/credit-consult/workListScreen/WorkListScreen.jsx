@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import "./workListScreen.scss";
-import CardTemplate from "@/componets/cardTemplate/CardTemplate";
+import CardTemplate from "@/components/cardTemplate/CardTemplate";
 import Image from "next/image";
 
 export default function WorkListScreen() {

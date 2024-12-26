@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./page.scss";
-import LegalCard from "../../componets/consult-pages-cards/LegalCard";
-import LegalTitle from "../../componets/consult-pages-titles/LegalTitle";
-import Footer from "@/componets/footer/Footer";
+import LegalCard from "../../components/consult-pages-cards/LegalCard";
+import LegalTitle from "../../components/consult-pages-titles/LegalTitle";
+import Footer from "@/components/footer/Footer";
 export default function page() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -23,39 +23,39 @@ export default function page() {
   };
   const dataCard = [
     {
-      bgImg: "",
+      bgImg: "/images/TaxCardBg(1).png",
       img: "/images/ConsultLaw.svg",
       whiteText: "Налоговая отчетность",
       grayText: "подготовка и подача деклараций, расчет налогов.",
     },
     {
-      bgImg: "LegalConsultLow",
+      bgImg: "/images/TaxCardBg(2).jpg",
       img: "/images/ConsultCourt.svg",
       whiteText: "Консультации по налоговому <br/> законодательству",
       grayText: "помощь в понимании и применении налоговых норм.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxCardBg(3).jpg",
       img: "/images/ConsultCertificate.svg",
       whiteText: "Оптимизация <br/> налогообложения",
       grayText:
         "разработка стратегий для минимизации налоговой нагрузки в рамках закона.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxCardBg(4).jpg",
       img: "/images/ConsultPencil.svg",
       whiteText: "Сопровождение при <br/> налоговых проверках",
       grayText:
         "защита интересов клиента, ведение переговоров с налоговыми органами.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxCardBg(5).jpg",
       img: "/images/ConsultHammer.svg",
       whiteText: "Аудит налоговой <br/> документации",
       grayText: "проверка корректности налогового учета и отчетности.",
     },
     {
-      bgImg: "",
+      bgImg: "/images/TaxCardBg(6).jpg",
       img: "/images/ConsultSword.svg",
       whiteText: "Управление налоговыми  рисками",
       grayText:
@@ -106,7 +106,7 @@ export default function page() {
           </main>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

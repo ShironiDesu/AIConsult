@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./page.scss";
-import LegalCard from "../../componets/consult-pages-cards/LegalCard";
-import LegalTitle from "../../componets/consult-pages-titles/LegalTitle";
-import Footer from "@/componets/footer/Footer";
+import LegalCard from "../../components/consult-pages-cards/LegalCard";
+import LegalTitle from "../../components/consult-pages-titles/LegalTitle";
+import Footer from "@/components/footer/Footer";
 export default function page() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -23,34 +23,34 @@ export default function page() {
   };
   const dataCard = [
     {
-      bgImg: "/images/TaxBg(1).png",
+      bgImg: "/images/AccountingCardBg(1).jpg",
       img: "/images/ConsultLaw.svg",
       whiteText: "Ведение бухгалтерского учета",
       grayText:
         "полное или частичное сопровождение учета для компаний любого масштаба.",
     },
     {
-      bgImg: "/images/TaxBg(2).png",
+      bgImg: "/images/AccountingCardBg(2).jpg",
       img: "/images/ConsultCourt.svg",
       whiteText: "Восстановление учета",
       grayText:
         "приведение документации в порядок в случае пропусков или ошибок.",
     },
     {
-      bgImg: "/images/TaxBg(3).png",
+      bgImg: "/images/AccountingCardBg(3).jpg",
       img: "/images/ConsultCertificate.svg",
       whiteText: "Составление и сдача отчетности",
       grayText:
         "подготовка бухгалтерской, налоговой и финансовой отчетности в соответствии с законодательством.",
     },
     {
-      bgImg: "/images/TaxBg(4).png",
+      bgImg: "/images/AccountingCardBg(4).jpg",
       img: "/images/ConsultPencil.svg",
       whiteText: "Аудит бухгалтерского учета",
       grayText: "проверка правильности ведения учета и выявление ошибок.",
     },
     {
-      bgImg: "/images/TaxBg(5).png",
+      bgImg: "/images/AccountingCardBg(5).jpg",
       img: "/images/ConsultHammer.svg",
       whiteText: "Оптимизация учета",
       grayText: "автоматизация процессов и снижение издержек на бухгалтерию.",
@@ -93,7 +93,7 @@ export default function page() {
           </main>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
