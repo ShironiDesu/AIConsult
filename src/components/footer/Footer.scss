@@ -1,0 +1,138 @@
+@use "../../styles/mixins.scss" as *;
+.footer {
+  padding: 97px 80px 113px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+  // height: 100lvh;
+  @include break(600px) {
+    padding: 97px 40px 113px;
+  }
+  @include mobile-big {
+    padding: 0 17px 130px;
+    gap: 48px;
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 400;
+    background: linear-gradient(
+      158.22deg,
+      #ffffff 7.25%,
+      rgba(153, 153, 153, 0.75) 87.33%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include mobile-big {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 596px;
+    .contact-us__btn {
+      margin-top: 50px;
+      align-self: flex-start;
+      @include mobile-big {
+        margin-top: 6px;
+      }
+    }
+  }
+}
+#footer-background {
+  min-height: auto;
+}
+
+.background-foot {
+  width: 100%;
+
+  background-image: url("/images/FooterBg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include break(600px) {
+    background-position: right;
+  }
+}
+.footer_input__message {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footer_input_wrapper {
+  position: relative;
+
+  input {
+    background: none;
+    font-size: 18px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    // color: black;
+    transition: 0.3s ease;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    font-size: 10px;
+    color: gray;
+    top: 0;
+    transform: translateY(0);
+  }
+}
+.footer_textarea__wrapper {
+  position: relative;
+
+  textarea {
+    resize: none;
+    // overflow:;
+    background: none;
+    font-size: 18px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    top: 20%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    // color: black;
+    transition: 0.3s ease;
+  }
+
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label {
+    font-size: 10px;
+    color: gray;
+    top: 0;
+    transform: translateY(0);
+  }
+}

@@ -1,7 +1,15 @@
-@import "mixins";
-@import "typography";
-@import "variables";
-
+// @import "mixins";
+// @import "typography";
+// @import "variables";
+@use "./mixins.scss" as mixins;
+@use "./typography.scss";
+@use "./variables.scss" as variables;
+:root {
+  --font-primary: var(--font-plus-jakarta);
+  --font-secondary: var(--euclid-circular);
+  --navigation-position: 0px;
+}
+*,
 body,
 .container,
 ul {
@@ -12,29 +20,62 @@ ul {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $main;
+    background: radial-gradient(
+        48.64% 48.64% at 49.99% 49.97%,
+        #ff3dd5 0%,
+        #db34b7 4%,
+        #ad2991 10%,
+        #841f6e 16%,
+        #601750 23%,
+        #420f37 31%,
+        #290a23 39%,
+        #170513 48%,
+        #090208 59%,
+        #020001 73%,
+        #000000 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background-blend-mode: screen;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
     &:active {
-      background-color: white;
+      background: radial-gradient(
+        48.64% 48.64% at 49.99% 49.97%,
+        #00ff80 0%,
+        /* Яркий зеленый */ #00e673 4%,
+        /* Чуть темнее */ #00cc66 10%,
+        /* Умеренный зеленый */ #00b359 16%,
+        /* Темно-зеленый */ #00994d 23%,
+        /* Ещё темнее */ #007f40 31%,
+        /* Болотный оттенок */ #006633 39%,
+        /* Густой темно-зеленый */ #004d26 48%,
+        /* Зеленовато-коричневый */ #00331a 59%,
+        /* Очень темный зеленый */ #001a0d 73%,
+        /* Темный почти чёрный */ #000000 100% /* Чёрный */
+      );
     }
   }
+}
+.home-container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  position: relative;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 64px;
   position: relative;
-  @include pc {
-    padding: 32px;
-  }
+  // @include mixins.pc {
+  //   padding: 32px;
+  // }
 
-  @include laptop() {
-    padding: 24px;
-  }
-  @include mobile-big() {
-    padding: 16px;
-  }
+  // @include mixins.laptop() {
+  //   padding: 24px;
+  // }
+  // @include mixins.mobile-big() {
+  //   padding: 16px;
+  // }
 }
