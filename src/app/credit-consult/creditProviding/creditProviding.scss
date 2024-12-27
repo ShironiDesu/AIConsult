@@ -73,20 +73,16 @@
     }
   }
 
-  // @include mixins.pc {
-  //   padding: 239px 80px 173px;
-  // }
-
   @include mixins.break(1180px) {
     padding: 200px 60px 150px;
   }
 
   @include mixins.break(1030px) {
-    padding: 173px 50px 100px;
+    padding: 173px 50px 140px;
   }
 
   @include mixins.break(920px) {
-    padding: 173px 40px 100px;
+    padding: 173px 40px 140px;
   }
 
   @include mixins.break(880px) {
@@ -98,6 +94,7 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 173px 40px 120px;
   }
 
   @include mixins.break(600px) {
@@ -105,6 +102,6 @@
   }
 
   @include mixins.break(480px) {
-    padding: 173px 15px 80px;
+    padding: 173px 15px 90px;
   }
 }

@@ -49,6 +49,7 @@
 
     &__cards {
         display: flex;
+        justify-content: center;
         padding-top: 74px;
         gap: 25px;
         
@@ -90,12 +91,12 @@
         padding: 34px 10px 80px;
     }
 
-    @include mixins.break(600px) {
+    @include mixins.break(525px) {
         padding: 34px 0 80px;
     }
 
     @include mixins.break(480px) {
-        padding: 40px 0 40px;
+        padding: 40px 10px 80px;
     }
     
 }

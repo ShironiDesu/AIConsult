@@ -62,10 +62,6 @@
     @include mixins.break(880px) {
       gap: 50px;
 
-      background-image: url("/images/support-screen.jpg");
-      background-position: top;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
 
     @include mixins.break(600px) {
@@ -78,11 +74,11 @@
   }
 
   @include mixins.break(1030px) {
-    padding: 173px 40px 100px;
+    padding: 173px 40px 140px;
   }
 
   @include mixins.break(920px) {
-    padding: 173px 30px 100px;
+    padding: 173px 30px 140px;
   }
 
   @include mixins.break(880px) {
@@ -90,17 +86,18 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 42px;
-    // background-image: url("/images/credit_screen.png");
-    // background-position: top;
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    background-image: url("/images/support-screen.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 173px 30px 120px;
   }
 
   @include mixins.break(600px) {
-    padding: 173px 25px 60px;
+    padding: 173px 25px 120px;
   }
 
   @include mixins.break(480px) {
-    padding: 173px 15px 60px;
+    padding: 173px 15px 90px;
   }
 }
