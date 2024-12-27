@@ -23,7 +23,7 @@ export default function StartupsGuarantees() {
         },
         {
           imageSrc: "/images/tick-second.png",
-          title: "Подготовка пакета документов:**",
+          title: "Подготовка пакета документов:",
           descriptions: [
             "— Проверка и сбор необходимых документов.",
             "— Оформление бумаг в соответствии с требованиями.",

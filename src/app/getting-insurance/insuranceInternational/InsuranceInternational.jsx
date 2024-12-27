@@ -144,11 +144,11 @@ export default function InsuranceInternational() {
                 </div>
               </div>
               <div className="card-template-gray__bottom fix-bottom-height">
-                <h4 className="card-template-gray__top_criterions_title">
+                {/* <h4 className="card-template-gray__top_criterions_title">
                   Что входит в перечень <br />
                   работ по каждой категории <br />
                   услуг страховой гарантии:
-                </h4>
+                </h4> */}
                 {card.advantages.map((adv, index) => (
                   <div
                     key={adv.title + index}

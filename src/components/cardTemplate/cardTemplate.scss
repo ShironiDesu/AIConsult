@@ -423,15 +423,19 @@
   }
 
   @include mixins.break(1330px) {
-    width: 360px;
+    // width: 360px;
+    width: 30.6%;
   }
 
-  @include mixins.break(1180px) {
-    width: 310px;
-  }
-  @include mixins.break(1030px) {
-    width: 270px;
-  }
+  // @include mixins.break(1180px) {
+  //   width: 310px;
+  // }
+  // @include mixins.break(1105px) {
+  //   width: 290px;
+  // }
+  // @include mixins.break(1030px) {
+  //   width: 270px;
+  // }
   @include mixins.break(880px) {
     width: 90%;
 
@@ -876,16 +880,21 @@
   }
 
   @include mixins.break(1330px) {
-    width: 360px;
+    // width: 360px;
+    width: 30.6%;
   }
 
-  @include mixins.break(1180px) {
-    width: 310px;
-  }
+  // @include mixins.break(1180px) {
+  //   width: 310px;
+  // }
 
-  @include mixins.break(1030px) {
-    width: 270px;
-  }
+  // @include mixins.break(1105px) {
+  //   width: 290px;
+  // }
+
+  // @include mixins.break(1030px) {
+  //   width: 270px;
+  // }
 
   @include mixins.break(880px) {
     width: 90%;
@@ -1370,16 +1379,22 @@
   }
 
   @include mixins.break(1330px) {
-    width: 360px;
+    // width: 360px;
+    width: 30.6%;
   }
 
-  @include mixins.break(1180px) {
-    width: 310px;
-  }
+  // @include mixins.break(1180px) {
+  //   // width: 320px;
+  //   width: 30%;
+  // }
 
-  @include mixins.break(1030px) {
-    width: 270px;
-  }
+  // @include mixins.break(1105px) {
+  //   width: 300px;
+  // }
+
+  // @include mixins.break(1030px) {
+  //   width: 270px;
+  // }
 
   @include mixins.break(880px) {
     width: 90%;

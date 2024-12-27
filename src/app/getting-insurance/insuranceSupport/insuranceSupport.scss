@@ -126,7 +126,7 @@
     }
 
     @include mixins.break(920px) {
-        padding: 173px 40px 31px;
+        padding: 173px 40px 100px;
     }
 
     @include mixins.break(880px) {
@@ -142,11 +142,11 @@
     }
 
     @include mixins.break(600px) {
-        padding: 173px 25px 31px;
+        padding: 173px 25px 100px;
         gap: 24px;
     }
 
     @include mixins.break(480px) {
-        padding: 173px 15px 31px;
+        padding: 173px 15px 90px;
     }
 }

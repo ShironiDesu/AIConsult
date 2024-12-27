@@ -64,18 +64,30 @@
   }
 }
 .background {
+  position: relative;
   width: 100%;
   min-height: 100vh;
+  // background-attachment: fixed;
 
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   @include mixins.tablet {
     background-position-y: 90px;
-    background-size: contain;
+    background-size: cover;
     @include mixins.mobile-big {
       background-position-y: 68px;
     }
+  }
+  .another-smooth-transition {
+    width: 100%;
+    height: 40px;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 702px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.069), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.069));
   }
 }
 .accounting-consulting__main__mobile {

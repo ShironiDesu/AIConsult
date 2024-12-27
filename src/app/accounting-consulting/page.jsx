@@ -94,6 +94,7 @@ export default function page() {
         )}
       </div>
       <Footer />
+      <div className="another-smooth-transition"></div>
     </div>
   );
 }

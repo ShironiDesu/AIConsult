@@ -103,7 +103,7 @@ export default function InternationalСompanies() {
   return (
     <div className="international-companies">
       <h2 className="international-companies__title">
-        Гарантии для Крупного <br /> и масштабного бизнеса
+        Гарантия для международных <br /> и крупных компании
       </h2>
       <div className="international-companies__cards">
         {cardsInfoArr.map((card) => (
