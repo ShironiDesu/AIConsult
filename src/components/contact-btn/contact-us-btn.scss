@@ -36,25 +36,18 @@
     font-size: 17px;
     line-height: 21px;
   }
-  &:hover {
-    z-index: 5;
 
-    &::after {
-      z-index: 3;
-      top: 1;
-      right: 1;
-      height: 100% !important;
-    }
-  }
   &::after {
     content: "";
+    position: absolute;
     top: -6;
     right: -7px;
     width: 100%;
     height: calc(100% + 12px);
-    position: absolute;
-    z-index: 1;
+
+    z-index: -1;
     background-image: url("/images/credit_screen_btn-border.png");
+
     // background-color: red;
     background-position: right;
     background-size: contain;
@@ -62,27 +55,17 @@
     border: 0;
     transition: all 0.4s ease;
   }
+  &:hover {
+    z-index: 5;
 
-  // &::before {
-  //   content: "";
-  //   top: -2;
-  //   border-radius: 12px;
-  //   right: -2;
-  //   width: calc(100% + 2px);
-  //   height: calc(100% + 2px);
-  //   position: absolute;
-  //   // border: 1px solid;
-  //   border: 0;
-  //   z-index: -1;
-
-  //   background: radial-gradient(
-  //     100% 100% at 50% 0%,
-  //     #ffffff 0%,
-  //     rgba(255, 255, 255, 0.4) 24.33%,
-  //     #479f5d 74.32%
-  //   );
-  // }
-
+    &::after {
+      z-index: -5;
+      top: 1;
+      right: 1;
+      height: 100% !important;
+      opacity: 0;
+    }
+  }
   &-vector {
     width: 11px;
     height: 11px;
