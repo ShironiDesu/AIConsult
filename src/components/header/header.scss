@@ -74,24 +74,28 @@
     @include mixins.tablet {
       display: none;
     }
-
+    &__p {
+      &:hover {
+        color: rgba(31, 126, 22, 1);
+      }
+    }
     &__card {
       display: flex;
       height: 90px;
       align-items: center;
       gap: 4px;
-      opacity: 0.35;
+      // opacity: 0.35;
       transition: 0.4s all ease-in-out;
       cursor: pointer;
       padding: 0 35px;
-      @include mixins.break(1240px) {
+      @include mixins.break(1252px) {
         padding: 0 25px;
       }
       @include mixins.break(1000px) {
         padding: 0 20px;
       }
-      @include mixins.break(940px) {
-        padding: 0 15px;
+      @include mixins.break(950px) {
+        padding: 0 12px;
       }
       @include mixins.break(830px) {
         padding: 0 10px;
@@ -101,9 +105,14 @@
         opacity: 1;
       }
     }
+    @include mixins.tablet {
+      &:hover {
+        all: unset;
+      }
+    }
 
     &__number {
-      opacity: 0.4;
+      opacity: 0.8;
       color: rgba(31, 126, 22, 1);
     }
 
@@ -226,18 +235,21 @@
   align-self: flex-end;
 }
 .header__burger__top.open {
+  cursor: pointer;
   width: 0%; /* Уменьшаем ширину */
   transform: rotate(45deg); /* Поворот верхней полоски */
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
 .header__burger__bottom.open {
+  cursor: pointer;
   width: 0%; /* Уменьшаем ширину */
   transform: rotate(-45deg); /* Поворот нижней полоски */
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
 .header__burger__mid.open {
+  cursor: pointer;
   opacity: 0; /* Убираем середину */
   transition: opacity 0.3s ease;
 }
@@ -251,6 +263,7 @@
   transition: opacity 0.3s ease;
 }
 .header__burger__img.open {
+  cursor: pointer;
   opacity: 1;
 }
 .header__navigation__mobile {
@@ -266,6 +279,10 @@
     font-weight: 500;
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    &:active {
+      color: rgb(148, 218, 128);
+      opacity: 1;
+    }
     &--active {
       opacity: 1;
       position: relative;
@@ -294,7 +311,7 @@
     &__number {
       // padding: 28px 48px 28px;
       padding-left: 48px;
-      opacity: 0.4;
+      opacity: 0.8;
       padding-bottom: 28px;
       padding-top: 28px;
     }
@@ -308,7 +325,8 @@
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         color: rgba(255, 255, 255, 1);
-        opacity: 0.06;
+        opacity: 0.09;
+        align-self: flex-start;
       }
       &__title {
         font-family: Arial, Helvetica, sans-serif;
@@ -317,7 +335,7 @@
         font-weight: 400;
         line-height: 23px;
         font-size: 15px;
-        // text-align: left;
+        text-align: left;
       }
     }
   }

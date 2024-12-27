@@ -53,7 +53,7 @@ const AccordionContent = React.forwardRef(
     >
       <div
         className={cn(
-          "pb-4 flex gap-1 cursor-pointer opacity-70 hover:opacity-100 pt-0 transition-all",
+          "pb-4 flex gap-1 cursor-pointer opacity-70 active:opacity-100 pt-0 transition-all",
           className
         )}
       >

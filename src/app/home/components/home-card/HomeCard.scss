@@ -61,7 +61,11 @@
       transform: translateY(-10px);
     }
   }
-
+  @include mixins.tablet {
+    &:hover {
+      transform: translateY(0px);
+    }
+  }
   &__white-text {
     color: rgba(255, 255, 255, 1);
     line-height: 24px;

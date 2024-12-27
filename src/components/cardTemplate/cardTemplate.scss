@@ -401,7 +401,9 @@
     opacity: 0;
     transition: 0.4s all ease-in-out;
   }
-
+  @include mixins.tablet {
+    pointer-events: none;
+  }
   &:hover {
     transform: scaleY(1.042);
     // border: 2px solid rgba(66, 183, 40, 0.15);
@@ -863,7 +865,9 @@
   // &:nth-child(3)::before {
   //     height: 107%;
   // }
-
+  @include mixins.tablet {
+    pointer-events: none;
+  }
   &:hover {
     transform: scaleY(1.042);
     // border: 2px solid rgba(66, 183, 40, 0.15);
@@ -1345,7 +1349,9 @@
     opacity: 0;
     transition: 0.4s all ease-in-out;
   }
-
+  @include mixins.tablet {
+    pointer-events: none;
+  }
   &:hover {
     transform: scaleY(1.042);
     // border: 2px solid rgba(66, 183, 40, 0.15);

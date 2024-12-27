@@ -9,15 +9,19 @@
   background-size: cover;
   min-height: 373px;
   //   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 13px;
+  border-radius: 14px;
   backdrop-filter: blur(19px);
   padding: 22px;
+  border: 0;
   cursor: pointer;
   transition: transform 0.3s ease;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: translateY(-10px);
     }
+  }
+  @include tablet {
+    pointer-events: none;
   }
   @include break(1080) {
     padding: 20px 10px;
@@ -47,7 +51,7 @@
     &__title {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
       h3 {
         display: block;
         font-size: 20px;
