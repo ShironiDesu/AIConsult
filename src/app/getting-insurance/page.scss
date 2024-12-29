@@ -30,7 +30,6 @@
 
     pointer-events: none;
 
-
     @include mixins.break(1430px) {
       display: none;
     }
@@ -58,7 +57,7 @@
     content: "";
     position: absolute;
     z-index: 1;
-    bottom: 720px;
+    bottom: 790px;
     left: 0;
     // background: linear-gradient(90deg, rgba(255, 0, 0, 0),rgba(5, 8, 2, 1));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(5, 8, 2, 1));

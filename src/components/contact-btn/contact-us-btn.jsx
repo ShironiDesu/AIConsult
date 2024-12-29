@@ -3,9 +3,23 @@ import React from "react";
 import "./contact-us-btn.scss";
 import Image from "next/image";
 
-export default function ContactUsBtn() {
+export default function ContactUsBtn({ type, isSubmit, onClick }) {
+  const phoneNumber = "+77715920875";
+
+  const handleClick = () => {
+    if (isSubmit) {
+      onClick();
+    } else {
+      window.open(`https://wa.me/${phoneNumber}`, "_blank");
+    }
+  };
+
   return (
-    <button className="contact-us__btn">
+    <button
+      type={isSubmit ? "submit" : "button"}
+      onClick={handleClick}
+      className="contact-us__btn"
+    >
       Связаться с нами
       <Image
         className="contact-us__btn-vector"
