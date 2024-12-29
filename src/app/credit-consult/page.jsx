@@ -14,6 +14,7 @@ export default function page() {
       <TariffsMediumBusinesses />
       <TariffsLargeBusinesses />
       <Footer />
+      <div className="smooth-transition"></div>
     </div>
   );
 }
