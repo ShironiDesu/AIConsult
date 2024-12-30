@@ -168,18 +168,13 @@ export default function Footer({}) {
                   <p>{error}</p>
                 </div>
               )}
-              {!isSubmitting && (
-                <ContactUsBtn
-                  type="submit"
-                  isSubmit={true}
-                  disabled={isLoading}
-                />
-              )}
-              {isSubmitting && (
-                <div className="footer_input__loader">
-                  <span class="loader"></span>
-                </div>
-              )}
+
+              <ContactUsBtn
+                type="submit"
+                isSubmit={true}
+                disabled={isLoading}
+                isSubmitting={isSubmitting}
+              />
             </form>
           </Form>
         </div>

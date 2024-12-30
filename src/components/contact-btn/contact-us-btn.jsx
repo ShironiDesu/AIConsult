@@ -3,7 +3,12 @@ import React from "react";
 import "./contact-us-btn.scss";
 import Image from "next/image";
 
-export default function ContactUsBtn({ type, isSubmit, onClick }) {
+export default function ContactUsBtn({
+  type,
+  isSubmit,
+  onClick,
+  isSubmitting,
+}) {
   const phoneNumber = "+77715920875";
 
   const handleClick = () => {
@@ -21,13 +26,21 @@ export default function ContactUsBtn({ type, isSubmit, onClick }) {
       className="contact-us__btn"
     >
       Связаться с нами
-      <Image
-        className="contact-us__btn-vector"
-        src="/images/credit_screen_btn-vector.png"
-        width={9}
-        height={11}
-        alt="Contact Us"
-      />
+      {isSubmitting ? (
+        <div className="footer_input__loader">
+          <span class="span__loader"></span>
+        </div>
+      ) : (
+        <>
+          <Image
+            className="contact-us__btn-vector"
+            src="/images/credit_screen_btn-vector.png"
+            width={9}
+            height={11}
+            alt="Contact Us"
+          />
+        </>
+      )}
     </button>
   );
 }
